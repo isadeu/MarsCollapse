@@ -23,5 +23,8 @@ public class GameOverCam : MonoBehaviour {
 			Application.LoadLevel("modelPlatformer");  //click button = go to intro scene
 			Application.Quit();
 		}
+
+
 	}
+
 }

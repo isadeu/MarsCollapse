@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{BA1FD8CB-EEB6-D05E-EE63-622665C5B4AB}") = "MarsCollapse", "Assembly-CSharp.csproj", "{F7B60017-9786-8C04-67D0-1BE12A1006DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7B60017-9786-8C04-67D0-1BE12A1006DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B60017-9786-8C04-67D0-1BE12A1006DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B60017-9786-8C04-67D0-1BE12A1006DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B60017-9786-8C04-67D0-1BE12A1006DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

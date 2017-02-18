@@ -15,15 +15,15 @@ public class squareMovement : MonoBehaviour {
 	KeyCode jumpButton;
 	KeyCode left;
 	KeyCode right;
-
 	bool playerInTrigger = false;
 	npcText currentNPC;
+	//public Texture PauseTexture;
 
 	//public float jumoAggro;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
-		jumpButton = KeyCode.UpArrow;
+		jumpButton = KeyCode.Space;
 		left = KeyCode.LeftArrow;
 		right = KeyCode.RightArrow;
 	}
@@ -35,6 +35,15 @@ public class squareMovement : MonoBehaviour {
 			jumpFlag = true;
 		}
 
+//
+//		//pause screen call
+//		if (Input.GetKeyDown (pause)) {
+//			Time.timeScale = 0f;
+//			Time.fixedDeltaTime = 0f;
+//			//GameObject.GetComponent <pauseScreen> ();
+//		}
+		
+
 
 		//npc text interaction
 		if (Input.GetKeyDown (KeyCode.A)) { //supposedly click A = npc text cancel
@@ -44,6 +53,7 @@ public class squareMovement : MonoBehaviour {
 					currentNPC.PlayerCancel ();
 				}
 			}
+
 		}
 
 	}		
@@ -71,7 +81,6 @@ public class squareMovement : MonoBehaviour {
 				rb.AddForce (Vector2.left * floorDrag * Mathf.Sign (rb.velocity.x) * Mathf.Pow (rb.velocity.x, 2));
 //			} else {
 //				rb.AddForce (Vector2.right * airFoce * goDir);
-//				rb.AddForce (Vector2.left * airDrag * Mathf.Sign (rb.velocity.x) * Mathf.Pow (rb.velocity.x, 2));
 //		}
 //		//drift prevention
 //		if (Mathf.Abs (rb.velocity.x) < .25) {
