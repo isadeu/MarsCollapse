@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class pauseScreen : MonoBehaviour {
-	public Texture pauseTexture;
+	public Texture pauseTexture; //this cant be a texture 
 	KeyCode pause;
 	bool gamePaused = false;
-	public SpriteRenderer thing;
+	public SpriteRenderer pScreen;
 	// Use this for initialization
 
 
 	void Start () {
-		pause = KeyCode.B;
+		pause = KeyCode.P;
 	}
 	
 	// Update is called once per frame
@@ -30,15 +30,12 @@ public class pauseScreen : MonoBehaviour {
 
 
 		if (gamePaused == false) {
-			thing.color = new Color (thing.color.r, thing.color.g, thing.color.b, 0f);
-			//gameObject.GetComponent<Renderer> ().material.color.a = 0;
-			//	pauseTexture.color.a = 0.0f;
+			pScreen.color = new Color (pScreen.color.r, pScreen.color.g, pScreen.color.b, 0f);
 		}
 
 		if (gamePaused == true) {
-			thing.color = new Color (thing.color.r, thing.color.g, thing.color.b, 1f);
+			pScreen.color = new Color (pScreen.color.r, pScreen.color.g,pScreen.color.b, 0.8f);
 			//thing.color = new Color (1, 0, 0, 1); //how to choose colors for other stuff including opacity
-			
 		}
 
 	}
@@ -47,14 +44,14 @@ public class pauseScreen : MonoBehaviour {
 		//reset button
 			void OnGUI()
 			{
-				GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),pauseTexture); //button itself
-				if (GUI.Button(new Rect(1000, Screen.height /2, 400, 70),"Resume")) //reset button and position
-				{
-					gamePaused = false;
-					Time.timeScale = 1f;
-					Time.fixedDeltaTime = 1f;
-				}
-			
+		if (gamePaused == true) {
+			GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), pauseTexture); //button itself
+			if (GUI.Button (new Rect (1000, Screen.height / 2, 400, 70), "Resume")) { //reset button and position
+				gamePaused = false;
+				Time.timeScale = 1f;
+				Time.fixedDeltaTime = 0.01666667f;
+			}
+		}
 		
 			}
 		

@@ -30,19 +30,20 @@ public class squareMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (transform.position.x > 6) {
+			Application.LoadLevel ("GameOver");
+			Application.Quit();
+		}
+		if (transform.position.y < -1f) {
+			Application.LoadLevel ("GameOver");
+			Application.Quit ();
+		}
+
 		if (Input.GetKeyDown (jumpButton)) 
 		{
 			jumpFlag = true;
 		}
-
-//
-//		//pause screen call
-//		if (Input.GetKeyDown (pause)) {
-//			Time.timeScale = 0f;
-//			Time.fixedDeltaTime = 0f;
-//			//GameObject.GetComponent <pauseScreen> ();
-//		}
-		
+			
 
 
 		//npc text interaction
@@ -105,6 +106,13 @@ public class squareMovement : MonoBehaviour {
 
 			playerInTrigger = true;
 		}
+
+//		if (c.gameObject.tag == "enemy") {
+//			transform.parent = c.transform;
+//		}
+//		if (c.gameObject.tag == "enemy") {
+//			rb.AddForce (ForceMode.Impulse);
+//		}
 
 	}
 
