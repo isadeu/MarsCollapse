@@ -12,6 +12,8 @@ public class squareMovement : MonoBehaviour {
 	bool jumpFlag;
 	bool onFloor;
 	int floorObjcts;
+	public float moveDeadzone;
+	public float stopForce;
 	KeyCode jumpButton;
 	KeyCode left;
 	KeyCode right;
@@ -78,20 +80,23 @@ public class squareMovement : MonoBehaviour {
 		}
 		if (onFloor) {
 			rb.AddForce (Vector2.right * floorForce * goDir);
-			//if (Mathf.Abs (rb.velocity.x) > 0) {
+//			if (Mathf.Abs (rb.velocity.x) > 0) {//no
 				rb.AddForce (Vector2.left * floorDrag * Mathf.Sign (rb.velocity.x) * Mathf.Pow (rb.velocity.x, 2));
-//			} else {
-//				rb.AddForce (Vector2.right * airFoce * goDir);
-//		}
-//		//drift prevention
-//		if (Mathf.Abs (rb.velocity.x) < .25) {
-//			rb.velocity = new Vector2 (0, rb.velocity.y);
-//		}
-		
+//			} else {//no
+//				rb.AddForce (Vector2.right * airFoce * goDir);//no
+
+				//drift prevention
+				if (goDir == 0) {
+					if (Mathf.Abs (rb.velocity.x) < moveDeadzone) {
+						rb.velocity = new Vector2 (0, rb.velocity.y);
+					} else {
+						rb.AddForce (Vector2.left * Mathf.Sign (rb.velocity.x) * stopForce);
+					}
 		
 				}
-				jumpFlag = false;
-
+		
+			jumpFlag = false;
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D c){

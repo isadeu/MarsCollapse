@@ -30,12 +30,9 @@ public class npcMovement : MonoBehaviour {
 	{
 		Debug.Log ("entered trigger extra");
 		moving = false;
-		if (c.gameObject.name   == "sprite") {//if it triggers contact with player, player will become the parent of this object
-			//tobeChild.transform.SetParent(mainChara);
+		if (c.gameObject.name   == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
 			tobeChild.transform.SetParent(mainChara.transform);
-			//SetParent.tobeChild(tobeChild.transform);
-			//tobeChild.transform(mainChara);
-			//mainChara.transform.SetParent(tobeChild );
+
 		}
 	
 	}
