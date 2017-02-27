@@ -81,7 +81,7 @@
 'Assets/G.Oscene/GameOverCam.cs'
 'Assets/Singleton.cs'
 'Assets/SingletonHelper.cs'
-'Assets/jumpBack.cs'
+'Assets/randomMovement.cs'
 'Assets/scripts/cameraStill.cs'
 'Assets/scripts/follow.cs'
 'Assets/scripts/npcMovement.cs'

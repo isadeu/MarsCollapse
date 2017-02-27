@@ -49,6 +49,7 @@
      <Compile Include="Assets\G.Oscene\GameOverCam.cs" />
      <Compile Include="Assets\Singleton.cs" />
      <Compile Include="Assets\SingletonHelper.cs" />
+     <Compile Include="Assets\randomMovement.cs" />
      <Compile Include="Assets\scripts\cameraStill.cs" />
      <Compile Include="Assets\scripts\follow.cs" />
      <Compile Include="Assets\scripts\npcMovement.cs" />
