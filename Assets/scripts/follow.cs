@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class follow : MonoBehaviour {
 	public GameObject mainChara;
+	public GameObject tobeChild;
+
+//	public float startLx = .2f;
+//	public float startLy = .86f;
+//	public float endLx = -.4f;
+//	public float endLy = .86f;
+//	public float speed = .5f;
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +23,14 @@ public class follow : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D c)
 	{
-		if (c.gameObject.name   == "sprite") {//if it triggers contact with player, player will become the parent of this object ie.follow
-		transform.parent = c.transform;
-	}
-
+		Debug.Log ("entered trigger extra");
+		if (c.gameObject.name == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
+			tobeChild.transform.SetParent (mainChara.transform);
+//		}else {
+//			Vector2 fromM = new Vector2 (startLx, startLy); //starts here
+//			Vector2 toM = new Vector2 (endLx, endLy); //goes to here and loops
+//
+//			transform.position = Vector2.Lerp (fromM, toM, Mathf.PingPong (Time.time * speed, 2));
+		}
 	}
 }
-

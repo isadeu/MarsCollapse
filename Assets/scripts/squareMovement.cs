@@ -32,6 +32,7 @@ public class squareMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//level boundaries
 		if (transform.position.x > 6) {
 			Application.LoadLevel ("GameOver");
 			Application.Quit();
@@ -112,12 +113,13 @@ public class squareMovement : MonoBehaviour {
 			playerInTrigger = true;
 		}
 
-//		if (c.gameObject.tag == "enemy") {
-//			transform.parent = c.transform;
-//		}
-//		if (c.gameObject.tag == "enemy") {
-//			rb.AddForce (ForceMode.Impulse);
-//		}
+		//critter jump back reaction
+		Vector2 force = new Vector2 (10, 5);
+		if (c.gameObject.name == "critterCollider") {//if it triggers contact with player, player will become the parent of this object
+			rb.AddForce (force, ForceMode2D.Impulse);
+		}
+			
+
 
 	}
 
