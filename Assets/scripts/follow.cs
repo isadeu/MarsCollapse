@@ -6,12 +6,6 @@ public class follow : MonoBehaviour {
 	public GameObject mainChara;
 	public GameObject tobeChild;
 
-//	public float startLx = .2f;
-//	public float startLy = .86f;
-//	public float endLx = -.4f;
-//	public float endLy = .86f;
-//	public float speed = .5f;
-
 	// Use this for initialization
 	void Start () {
 		

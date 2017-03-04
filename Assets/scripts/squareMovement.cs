@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class squareMovement : MonoBehaviour {
+	//movement
 	Rigidbody2D rb;
 	public float jumpForce;
 	public float floorDrag;
@@ -12,14 +13,17 @@ public class squareMovement : MonoBehaviour {
 	bool jumpFlag;
 	bool onFloor;
 	int floorObjcts;
-	public float moveDeadzone;
-	public float stopForce;
 	KeyCode jumpButton;
 	KeyCode left;
 	KeyCode right;
+	//drag
+	public float moveDeadzone;
+	public float stopForce;
+	bool yesDrag = (true);
+	//npc text interactions
 	bool playerInTrigger = false;
 	npcText currentNPC;
-	//public Texture PauseTexture;
+
 
 	//public float jumoAggro;
 	// Use this for initialization
@@ -28,6 +32,7 @@ public class squareMovement : MonoBehaviour {
 		jumpButton = KeyCode.Space;
 		left = KeyCode.LeftArrow;
 		right = KeyCode.RightArrow;
+
 	}
 	
 	// Update is called once per frame
@@ -86,8 +91,8 @@ public class squareMovement : MonoBehaviour {
 //			} else {//no
 //				rb.AddForce (Vector2.right * airFoce * goDir);//no
 
-				//drift prevention
-				if (goDir == 0) {
+				//drift prevention only after start 
+			if (goDir == 0 && yesDrag == true) {
 					if (Mathf.Abs (rb.velocity.x) < moveDeadzone) {
 						rb.velocity = new Vector2 (0, rb.velocity.y);
 					} else {

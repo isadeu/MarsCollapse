@@ -17,7 +17,7 @@ public class randomMovement : MonoBehaviour {
 		float speed = Random.Range (.11111f, .3f);
 		Vector2 fromM = new Vector2 (xX, 0.23f); //starts here
 		Vector2 toM = new Vector2 (xXX, 0.23f); //goes to here and loops
-		transform.position = Vector2.Lerp (fromM, toM, Mathf.PingPong (Time.deltaTime * speed, 2));
+		transform.position = Vector2.Lerp (fromM, toM, Mathf.PingPong (speed, 2));
 
 		//Vector3 position = new Vector3(Random.Range(-4.8f, -3f), 0.23f,0f);
 		//Instantiate(critter,position, Quaternion.identity);
