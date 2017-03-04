@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/npcMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/npcsfollowmove.cs">
     <Files>
-      <File FileName="Assets/scripts/cameraStill.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/squareMovement.cs" Line="72" Column="3" />
-      <File FileName="Assets/scripts/npcMovement.cs" Line="22" Column="69" />
+      <File FileName="Assets/scripts/squareMovement.cs" Line="78" Column="20" />
+      <File FileName="Assets/scripts/cameraStill.cs" Line="17" Column="2" />
+      <File FileName="Assets/scripts/npcsfollowmove.cs" Line="61" Column="2" />
+      <File FileName="Assets/scripts/npcMovement.cs" Line="16" Column="19" />
       <File FileName="Assets/scripts/randomMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/follow.cs" Line="31" Column="1" />
       <File FileName="Assets/scripts/timer.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/pauseScreen.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/npcText.cs" Line="1" Column="1" />

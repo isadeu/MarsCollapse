@@ -25,6 +25,7 @@ public class squareMovement : MonoBehaviour {
 	npcText currentNPC;
 
 
+
 	//public float jumoAggro;
 	// Use this for initialization
 	void Start () {
@@ -52,7 +53,7 @@ public class squareMovement : MonoBehaviour {
 			jumpFlag = true;
 		}
 			
-
+	
 
 		//npc text interaction
 		if (Input.GetKeyDown (KeyCode.A)) { //supposedly click A = npc text cancel
@@ -74,15 +75,16 @@ public class squareMovement : MonoBehaviour {
 		}
 
 		if (!Input.GetKey (jumpButton) && rb.velocity.y >= 0) {// ! = not
-			
 			rb.velocity = new Vector2 (rb.velocity.x, Mathf.Lerp (rb.velocity.y, 0, .25f));
 			// linear: rb.velocity = new Vector2 (rb.velocity.x, Mathf.Max(rb.velocity.y - jumpAggro, 0);
 		}
 
 		float goDir = 0;
-		if (Input.GetKey (left)) {goDir--;
+		if (Input.GetKey (left)) {
+			goDir--;
 		}
-		if (Input.GetKey (right)) {goDir++;
+		if (Input.GetKey (right)) {
+			goDir++;
 		}
 		if (onFloor) {
 			rb.AddForce (Vector2.right * floorForce * goDir);
@@ -92,7 +94,7 @@ public class squareMovement : MonoBehaviour {
 //				rb.AddForce (Vector2.right * airFoce * goDir);//no
 
 				//drift prevention only after start 
-			if (goDir == 0 && yesDrag == true) {
+			if (yesDrag == true && goDir == 0 ) {
 					if (Mathf.Abs (rb.velocity.x) < moveDeadzone) {
 						rb.velocity = new Vector2 (0, rb.velocity.y);
 					} else {
