@@ -38,6 +38,9 @@ public class squareMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//stop rotation
+		transform.rotation = Quaternion.identity;//so the obejct doesn't tilt
 		//level boundaries
 		if (transform.position.x > 6) {
 			Application.LoadLevel ("GameOver");
