@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/squareMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/npcsfollowmove.cs">
     <Files>
-      <File FileName="Assets/scripts/squareMovement.cs" Line="43" Column="33" />
-      <File FileName="Assets/scripts/npcsfollowmove.cs" Line="55" Column="3" />
-      <File FileName="Assets/scripts/randomMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/npcText.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/npcMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/squareMovement.cs" Line="140" Column="25" />
+      <File FileName="Assets/scripts/followerScript.cs" Line="46" Column="3" />
+      <File FileName="Assets/scripts/npcsfollowmove.cs" Line="67" Column="1" />
+      <File FileName="Assets/scripts/pauseScreen.cs" Line="31" Column="36" />
+      <File FileName="Assets/npcText.cs" Line="22" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

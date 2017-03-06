@@ -17,7 +17,7 @@ public class pauseScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//pause screen call
+		//pauses time
 		if (Input.GetKeyDown (pause)) {
 			gamePaused = true;
 			Time.timeScale = 0f;
@@ -28,7 +28,7 @@ public class pauseScreen : MonoBehaviour {
 		//GameObject.GetComponent <pauseScreen> ();
 
 
-
+		//image on the screen when paused
 		if (gamePaused == false) {
 			pScreen.color = new Color (pScreen.color.r, pScreen.color.g, pScreen.color.b, 0f);
 		}
@@ -41,7 +41,7 @@ public class pauseScreen : MonoBehaviour {
 	}
 
 
-		//reset button
+		//resume button
 			void OnGUI()
 			{
 		if (gamePaused == true) {

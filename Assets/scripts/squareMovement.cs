@@ -42,11 +42,11 @@ public class squareMovement : MonoBehaviour {
 		//stop rotation
 		transform.rotation = Quaternion.identity;//so the obejct doesn't tilt
 		//level boundaries
-		if (transform.position.x > 6) {
+		if (transform.position.x > 20) {
 			Application.LoadLevel ("GameOver");
 			Application.Quit();
 		}
-		if (transform.position.y < -1f) {
+		if (transform.position.y < -20f) {
 			Application.LoadLevel ("GameOver");
 			Application.Quit ();
 		}
@@ -121,20 +121,19 @@ public class squareMovement : MonoBehaviour {
 			c.gameObject.GetComponent<npcText> ().TalkToPlayer ();
 
 			playerInTrigger = true;
-		}
 
 		//critter jump back reaction
 		Vector2 force = new Vector2 (10, 5);
 		if (c.gameObject.name == "critterCollider") {//if it triggers contact with player, player will become the parent of this object
 			rb.AddForce (force, ForceMode2D.Impulse);
 		}
+		}
+}
+		
 			
 
 
-	}
-
-	void OnTriggerExit2D(Collider2D collisions)
-	{
+	void OnTriggerExit2D(Collider2D collisions){
 		floorObjcts--;
 		if (floorObjcts <= 0) {
 			onFloor = false;
@@ -146,7 +145,8 @@ public class squareMovement : MonoBehaviour {
 
 
 		}
+	
+
 	}
-
-
 }
+
