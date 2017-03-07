@@ -69,3 +69,6 @@ public class followerScript : MonoBehaviour {
 	}
 }
 
+//jump back to me b; the problem 
+//		if (mainChara.position	 + 3) {
+//			transform.position = Vector2.Lerp (mainChara.position);

@@ -51,6 +51,7 @@
      <Compile Include="Assets\Singleton.cs" />
      <Compile Include="Assets\SingletonHelper.cs" />
      <Compile Include="Assets\scripts\endState.cs" />
+     <Compile Include="Assets\scripts\flys.cs" />
      <Compile Include="Assets\scripts\followerScript.cs" />
      <Compile Include="Assets\scripts\newCamera.cs" />
      <Compile Include="Assets\scripts\npcText.cs" />
