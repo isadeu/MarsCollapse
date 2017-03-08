@@ -55,8 +55,8 @@ public class followerScript : MonoBehaviour {
 
 		if (following == true){
 			gameObject.layer = LayerMask.NameToLayer("following");
-		pointList.Add (mainChara.transform.position);
-		rb.position = pointList [0];
+			pointList.Add (mainChara.transform.position);
+			rb.position = pointList [0];
 		pointList.RemoveAt (0);
 		}
 	}

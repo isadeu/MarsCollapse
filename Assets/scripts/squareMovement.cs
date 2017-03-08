@@ -23,6 +23,8 @@ public class squareMovement : MonoBehaviour {
 	//npc text interactions
 	bool playerInTrigger = false;
 	npcText currentNPC;
+	//falling platforms
+	public float fallDelay;
 
 
 
@@ -121,17 +123,20 @@ public class squareMovement : MonoBehaviour {
 			c.gameObject.GetComponent<npcText> ().TalkToPlayer ();
 
 			playerInTrigger = true;
+		}
 
 		//critter jump back reaction
 		Vector2 force = new Vector2 (10, 5);
-		if (c.gameObject.name == "critterCollider") {//if it triggers contact with player, player will become the parent of this object
+		Debug.Log ("noticed jumpback");
+		if (c.gameObject.tag == "enemy") {
 			rb.AddForce (force, ForceMode2D.Impulse);
 		}
-		}
-}
-		
-			
 
+		//falling platforms 
+		if (c.gameObject.tag == "Player") {
+			StartCoroutine (Fall ());
+		}
+	}
 
 	void OnTriggerExit2D(Collider2D collisions){
 		floorObjcts--;
@@ -146,6 +151,14 @@ public class squareMovement : MonoBehaviour {
 
 		}
 	
+
+	}
+	IEnumerator Fall()
+	{
+		yield return new WaitForSeconds (fallDelay);
+		rb.isKinematic = false;
+
+		yield return 0;
 
 	}
 }
