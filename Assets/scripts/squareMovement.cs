@@ -133,20 +133,21 @@ public class squareMovement : MonoBehaviour {
 			rb.AddForce (force, ForceMode2D.Impulse);
 		}
 
-//		//falling platforms 
+//		//falling platforms
 //		if (c.gameObject.tag == "platform") {
 //			StartCoroutine (Fall ());
 //		}
-	}
-
+//	}
+//
 //	IEnumerator Fall()
 //	{
 //		yield return new WaitForSeconds (fallDelay);
-//		platform.isKinematic = false;
+//		platform.GetComponent<Rigidbody>().isKinematic = false;
+//		Debug.Log ("kinematicy");
 //
 //		yield return 0;
-//
-//	}
+
+	}
 
 
 	void OnTriggerExit2D(Collider2D collisions){

@@ -9,7 +9,8 @@ public class endState : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		endScreen = false;
+
+		savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g, savedScreen.color.b, 0f);
 	}
 	
 	// Update is called once per frame
@@ -20,20 +21,25 @@ public class endState : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "colliderobjects") {
 			Debug.Log ("player recieed");
-			endScreen = true;
-		} else {
-			endScreen = false;
-		}
-		if (endScreen == false) {
-			savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g, savedScreen.color.b, 0f);
-		}
+			//endScreen = true;
+			//if (endScreen == true) {
+				savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g,savedScreen.color.b, 0.8f);
+				Time.timeScale = 0f;
+				Time.fixedDeltaTime = 0f;
 
-		if (endScreen == true) {
-			savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g,savedScreen.color.b, 0.8f);
-			Time.timeScale = 0f;
-			Time.fixedDeltaTime = 0f;
-			//thing.color = new Color (1, 0, 0, 1); //how to choose colors for other stuff including opacity
+//		} else {
+//			endScreen = false;
 		}
+//		if (endScreen == false) {
+//			savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g, savedScreen.color.b, 0f);
+//		}
+
+//		if (endScreen == true) {
+//			savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g,savedScreen.color.b, 0.8f);
+//			Time.timeScale = 0f;
+//			Time.fixedDeltaTime = 0f;
+			//thing.color = new Color (1, 0, 0, 1); //how to choose colors for other stuff including opacity
+		//}
  		
 	}
 }

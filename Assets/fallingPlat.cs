@@ -16,7 +16,7 @@ public class fallingPlat : MonoBehaviour {
 
 		void OnTriggerEnter2D (Collider2D c){
 		//falling platforms 
-		if (c.gameObject.tag == "platform") {
+		if (c.gameObject.tag == "Player") {
 			StartCoroutine (Fall ());
 		}
 	}
