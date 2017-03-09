@@ -27,19 +27,6 @@ public class endState : MonoBehaviour {
 				Time.timeScale = 0f;
 				Time.fixedDeltaTime = 0f;
 
-//		} else {
-//			endScreen = false;
-		}
-//		if (endScreen == false) {
-//			savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g, savedScreen.color.b, 0f);
-//		}
-
-//		if (endScreen == true) {
-//			savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g,savedScreen.color.b, 0.8f);
-//			Time.timeScale = 0f;
-//			Time.fixedDeltaTime = 0f;
-			//thing.color = new Color (1, 0, 0, 1); //how to choose colors for other stuff including opacity
-		//}
- 		
+		} 		
 	}
 }

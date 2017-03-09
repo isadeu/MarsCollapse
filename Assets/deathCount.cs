@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class deathCount : MonoBehaviour {
 	
-	//float timeLeft = 20.0f;
 	// Use this for initialization
-	//float speed = 2.0f;
 	float peopleSaved = 0f;
 	Text deathcountText;
 
@@ -23,15 +21,16 @@ public class deathCount : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		deathcountText.text = "Those who you have Saved: " + peopleSaved.ToString ("F0") + " s";
-		
-		}
-
-	void OnTriggerEnter2D(Collider2D c){
-		if (c.gameObject.tag == "following") {
-			peopleSaved += 1f;
-		}
-		
+//		deathcountText.text = "Miners saved: " + peopleSaved.ToString ("F0") + " /5";
+//		}
 	}
+
+//
+//	void OnTriggerEnter2D(Collider2D c){
+//		if (c.gameObject.tag == "following") {
+//			peopleSaved += 1f;
+//		}
+//		
+//	}
 
 }
