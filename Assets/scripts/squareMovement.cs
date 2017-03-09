@@ -25,6 +25,7 @@ public class squareMovement : MonoBehaviour {
 	npcText currentNPC;
 	//falling platforms
 	public float fallDelay;
+	public GameObject platform;
 
 
 
@@ -132,11 +133,21 @@ public class squareMovement : MonoBehaviour {
 			rb.AddForce (force, ForceMode2D.Impulse);
 		}
 
-		//falling platforms 
-		if (c.gameObject.tag == "Player") {
-			StartCoroutine (Fall ());
-		}
+//		//falling platforms 
+//		if (c.gameObject.tag == "platform") {
+//			StartCoroutine (Fall ());
+//		}
 	}
+
+//	IEnumerator Fall()
+//	{
+//		yield return new WaitForSeconds (fallDelay);
+//		platform.isKinematic = false;
+//
+//		yield return 0;
+//
+//	}
+
 
 	void OnTriggerExit2D(Collider2D collisions){
 		floorObjcts--;
@@ -153,13 +164,6 @@ public class squareMovement : MonoBehaviour {
 	
 
 	}
-	IEnumerator Fall()
-	{
-		yield return new WaitForSeconds (fallDelay);
-		rb.isKinematic = false;
 
-		yield return 0;
-
-	}
 }
 

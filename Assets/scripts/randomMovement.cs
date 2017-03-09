@@ -5,8 +5,8 @@ public class randomMovement : MonoBehaviour {
 	Rigidbody2D rb;
 	Transform stuff;
 	Vector2 vel; // hold random velocity
-	float switchDirection =6; //3
-	float curTime  = 0;
+	float switchDirection =3; //3
+	float curTime  = 2;
 
 	void Start (){
 		rb = GetComponent <Rigidbody2D> ();
@@ -14,6 +14,8 @@ public class randomMovement : MonoBehaviour {
 		transform.rotation = Quaternion.identity;
 	}
 	void SetVel ()
+	//give switchdirection within the velocity
+	//if not addfoce in negatives 
 	{
 		if (Random.value > 0.5f) {
 			vel = Vector2.right * Random.Range(1,5); //1-5

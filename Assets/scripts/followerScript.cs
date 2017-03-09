@@ -57,7 +57,8 @@ public class followerScript : MonoBehaviour {
 			gameObject.layer = LayerMask.NameToLayer("following");
 			pointList.Add (mainChara.transform.position);
 			rb.position = pointList [0];
-		pointList.RemoveAt (0);
+			pointList.RemoveAt (0);
+			rb.isKinematic = true;
 		}
 	}
 
