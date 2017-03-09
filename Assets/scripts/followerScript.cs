@@ -45,7 +45,7 @@ public class followerScript : MonoBehaviour {
 //
 //	IEnumerator smallDelay() {
 //		print(Time.time);
-//		yield return new WaitForSeconds(10);
+//		yield return new WaitForSeconds(3f);
 //		print(Time.time);
 		//ja està
 	}
@@ -56,10 +56,16 @@ public class followerScript : MonoBehaviour {
 		if (following == true){
 			gameObject.layer = LayerMask.NameToLayer("following");
 			pointList.Add (mainChara.transform.position);
-			rb.position = pointList [0];
-			pointList.RemoveAt (0);
-			rb.isKinematic = true;
+			StartCoroutine ("FollowerDelay");
+		
 		}
+	}
+
+	IEnumerator FollowerDelay (){
+		yield return new WaitForSeconds (.3f);
+		rb.position = pointList [0];
+		pointList.RemoveAt (0);
+		rb.isKinematic = true;
 	}
 
 	void OnTriggerEnter2D (Collider2D c){

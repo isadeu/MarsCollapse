@@ -114,6 +114,7 @@ public class squareMovement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
+		//still on movement
 		onFloor = true;
 		floorObjcts++;
 
@@ -132,20 +133,6 @@ public class squareMovement : MonoBehaviour {
 		if (c.gameObject.tag == "enemy") {
 			rb.AddForce (force, ForceMode2D.Impulse);
 		}
-
-//		//falling platforms
-//		if (c.gameObject.tag == "platform") {
-//			StartCoroutine (Fall ());
-//		}
-//	}
-//
-//	IEnumerator Fall()
-//	{
-//		yield return new WaitForSeconds (fallDelay);
-//		platform.GetComponent<Rigidbody>().isKinematic = false;
-//		Debug.Log ("kinematicy");
-//
-//		yield return 0;
 
 	}
 

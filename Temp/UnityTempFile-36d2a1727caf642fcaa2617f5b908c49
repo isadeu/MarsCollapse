@@ -78,13 +78,12 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
-'Assets/Freedom Scene/freedom.cs'
 'Assets/G.Oscene/GameOverCam.cs'
 'Assets/Singleton.cs'
 'Assets/SingletonHelper.cs'
 'Assets/deathCount.cs'
-'Assets/fallingPlat.cs'
 'Assets/scripts/endState.cs'
+'Assets/scripts/fallingPlat.cs'
 'Assets/scripts/flys.cs'
 'Assets/scripts/followerScript.cs'
 'Assets/scripts/newCamera.cs'
