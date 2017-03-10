@@ -22,7 +22,7 @@ public class squareMovement : MonoBehaviour {
 	bool yesDrag = (true);
 	//npc text interactions
 	bool playerInTrigger = false;
-	npcText currentNPC;
+	//npcText currentNPC;
 	//falling platforms
 	public float fallDelay;
 	public GameObject platform;
@@ -62,15 +62,15 @@ public class squareMovement : MonoBehaviour {
 	
 
 		//npc text interaction
-		if (Input.GetKeyDown (KeyCode.A)) { //supposedly click A = npc text cancel
-
-			if (playerInTrigger) { //if the player is within the npc trigger:
-				if (Input.GetKeyDown (KeyCode.A)) {
-					currentNPC.PlayerCancel ();
-				}
-			}
-
-		}
+//		if (Input.GetKeyDown (KeyCode.A)) { //supposedly click A = npc text cancel
+//
+//			if (playerInTrigger) { //if the player is within the npc trigger:
+//				if (Input.GetKeyDown (KeyCode.A)) {
+//					currentNPC.PlayerCancel ();
+//				}
+//			}
+//
+//		}
 
 	}		
 		
@@ -118,14 +118,14 @@ public class squareMovement : MonoBehaviour {
 		onFloor = true;
 		floorObjcts++;
 
-		//npc text interaction
-		if (c.gameObject.tag == "NPCs") {
-			Debug.Log ("entered trigger");
-			currentNPC = c.gameObject.GetComponent<npcText> ();
-			c.gameObject.GetComponent<npcText> ().TalkToPlayer ();
-
-			playerInTrigger = true;
-		}
+//		//npc text interaction
+//		if (c.gameObject.tag == "NPCs") {
+//			Debug.Log ("entered trigger");
+//			currentNPC = c.gameObject.GetComponent<npcText> ();
+//			c.gameObject.GetComponent<npcText> ().TalkToPlayer ();
+//
+//			playerInTrigger = true;
+//		}
 
 		//critter jump back reaction
 		Vector2 force = new Vector2 (10, 5);
@@ -144,12 +144,12 @@ public class squareMovement : MonoBehaviour {
 		}
 
 		//npc text interaction
-		if (collisions.gameObject.tag == "NPCs") {
-			playerInTrigger = false;
-
-
-		}
-	
+//		if (collisions.gameObject.tag == "NPCs") {
+//			playerInTrigger = false;
+//
+//
+//		}
+//	
 
 	}
 

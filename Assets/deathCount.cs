@@ -20,17 +20,14 @@ public class deathCount : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-//		deathcountText.text = "Miners saved: " + peopleSaved.ToString ("F0") + " /5";
-//		}
+			deathcountText.text = "Miners saved: " + peopleSaved.ToString ("F0") + " out of 5";
 	}
 
-//
-//	void OnTriggerEnter2D(Collider2D c){
-//		if (c.gameObject.tag == "following") {
-//			peopleSaved += 1f;
-//		}
-//		
-//	}
+	void OnTriggerEnter2D(Collider2D c){
+		if (c.gameObject.tag == "following") {
+			peopleSaved += 1f;
+		}
+		
+	}
 
 }
