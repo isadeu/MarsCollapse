@@ -18,6 +18,7 @@ public class followerScript : MonoBehaviour {
 	public float speed = .5f;
 	//delay
 	bool delay;
+	public float WaitTime = .3f;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();	
@@ -62,7 +63,7 @@ public class followerScript : MonoBehaviour {
 	}
 
 	IEnumerator FollowerDelay (){
-		yield return new WaitForSeconds (.3f);
+		yield return new WaitForSeconds (WaitTime);
 		rb.position = pointList [0];
 		pointList.RemoveAt (0);
 		rb.isKinematic = true;

@@ -17,7 +17,7 @@ public class fallingPlat : MonoBehaviour {
 
 
 		void OnTriggerEnter2D (Collider2D c){
-		Debug.Log("col.collider.tag");
+		Debug.Log("c.collider.tag");
 		//falling platforms 
 		if (c.gameObject.name == "colliderobjects") {
 			StartCoroutine ("Fall");
