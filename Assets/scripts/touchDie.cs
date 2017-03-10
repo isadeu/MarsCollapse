@@ -15,7 +15,18 @@ public class touchDie : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
-		Application.LoadLevel ("GameOver");
-		Application.Quit ();
+		if (c.gameObject.tag == "Player")
+			{
+			Application.LoadLevel ("GameOver");
+			Application.Quit ();
+//			StartCoroutine ("Quit");
+		}
+	
 	}
+//			IEnumerator Quit (){
+//				yield return new WaitForSeconds (1);
+//			Application.LoadLevel ("GameOver");
+//			Application.Quit ();
+//				yield return 0;
+//			}
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class squareMovement : MonoBehaviour {
 	//movement
@@ -130,8 +131,14 @@ public class squareMovement : MonoBehaviour {
 		//critter jump back reaction
 		Vector2 force = new Vector2 (10, 5);
 		Debug.Log ("noticed jumpback");
-		if (c.gameObject.tag == "enemy") {
+		if (c.gameObject.name == "critterCollider") {
 			rb.AddForce (force, ForceMode2D.Impulse);
+		}
+
+		//touchdie
+		if (c.gameObject.tag == "enemy") {
+			Application.LoadLevel ("GameOver");
+			Application.Quit ();
 		}
 
 	}

@@ -49,8 +49,9 @@
      <Compile Include="Assets\G.Oscene\GameOverCam.cs" />
      <Compile Include="Assets\Singleton.cs" />
      <Compile Include="Assets\SingletonHelper.cs" />
-     <Compile Include="Assets\deathCount.cs" />
      <Compile Include="Assets\dialogueHolder.cs" />
+     <Compile Include="Assets\openingScene.cs" />
+     <Compile Include="Assets\scripts\deathCount.cs" />
      <Compile Include="Assets\scripts\dialogueManager.cs" />
      <Compile Include="Assets\scripts\endState.cs" />
      <Compile Include="Assets\scripts\fallingPlat.cs" />

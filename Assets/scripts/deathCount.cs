@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class deathCount : MonoBehaviour {
 	
 	// Use this for initialization
-	float peopleSaved = 0f;
-	Text deathcountText;
+	public int peopleSaved = 0;
+	public Text deathcountText;
 
 
 
 	void Start () {
-		deathcountText = GetComponent < Text > ();
+		//deathcountText = GetComponent < Text > ();
 
 	}
 
@@ -20,12 +20,14 @@ public class deathCount : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-			deathcountText.text = "Miners saved: " + peopleSaved.ToString ("F0") + " out of 5";
+		deathcountText.text = "Miners saved: "+ peopleSaved + " out of 5";
 	}
 
 	void OnTriggerEnter2D(Collider2D c){
-		if (c.gameObject.tag == "following") {
-			peopleSaved += 1f;
+		if (c.gameObject.tag == "NPCs") {
+			Debug.Log ("triggered");
+			peopleSaved += 1;
+			c.gameObject.SetActive (false);
 		}
 		
 	}
