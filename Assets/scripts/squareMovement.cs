@@ -27,7 +27,11 @@ public class squareMovement : MonoBehaviour {
 	//falling platforms
 	public float fallDelay;
 	public GameObject platform;
-
+	// text
+//	string[] dialogueLine = new string[3];
+//	public Text dText;
+//	public GameObject dBox;
+//	public GameObject npcTalking;
 
 
 	//public float jumoAggro;
@@ -38,6 +42,13 @@ public class squareMovement : MonoBehaviour {
 		left = KeyCode.LeftArrow;
 		right = KeyCode.RightArrow;
 
+		//text
+//		for (int i = 0; i < 3; i++) {
+//			dialogueLine [1] = "gneiwnlqkme";
+//			dialogueLine [2] = "hhhh";
+//			dialogueLine [3] = "ohu";
+//		}
+//
 	}
 	
 	// Update is called once per frame
