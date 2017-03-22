@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class touchDie : MonoBehaviour {
@@ -17,8 +18,8 @@ public class touchDie : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.tag == "Player")
 			{
-			Application.LoadLevel ("GameOver");
-			Application.Quit ();
+			SceneManager.LoadScene ("GameOver");
+			//Application.Quit ();
 //			StartCoroutine ("Quit");
 		}
 	

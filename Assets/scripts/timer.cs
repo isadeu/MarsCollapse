@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class timer : MonoBehaviour {
 	Text timerText;
-	float timeLeft = 200.0f;
+	float timeLeft = 80.0f;
 	// Use this for initialization
 	float speed = 2.0f;
 
@@ -22,8 +23,8 @@ public class timer : MonoBehaviour {
 	void Update () {
 		timeLeft -= Time.deltaTime;
 		if (timeLeft < 0) {
-			Application.LoadLevel ("GameOver");
-			Application.Quit ();
+			SceneManager.LoadScene ("GameOver");
+			//Application.Quit ();
 		}
 
 		timerText.text = "Time till imminent death: " + timeLeft.ToString ("F0") + " s";

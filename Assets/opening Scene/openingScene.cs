@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class openingScene : MonoBehaviour {
@@ -17,8 +18,8 @@ public class openingScene : MonoBehaviour {
 	{
 		GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), openingTexture); //button itself
 		if (GUI.Button (new Rect (1000, Screen.height / 2, 400, 70), "Beguin!")) { 
-			Application.LoadLevel ("modelPlatformer");  //click button = go to intro scene
-			Application.Quit ();
+			SceneManager.LoadScene ("modelPlatformer");  //click button = go to intro scene
+			//Application.Quit ();
 			//reset button and position
 		}
 	}

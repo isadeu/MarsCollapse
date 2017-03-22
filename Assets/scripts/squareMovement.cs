@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class squareMovement : MonoBehaviour {
@@ -17,16 +18,22 @@ public class squareMovement : MonoBehaviour {
 	KeyCode jumpButton;
 	KeyCode left;
 	KeyCode right;
+
 	//drag
 	public float moveDeadzone;
 	public float stopForce;
 	bool yesDrag = (true);
+
 	//npc text interactions
 	bool playerInTrigger = false;
 	//npcText currentNPC;
+
 	//falling platforms
 	public float fallDelay;
 	public GameObject platform;
+
+	//sound
+	public AudioClip hitSnds;
 	// text
 //	string[] dialogueLine = new string[3];
 //	public Text dText;
@@ -50,20 +57,24 @@ public class squareMovement : MonoBehaviour {
 //		}
 //
 	}
+
+
 	
 	// Update is called once per frame
 	void Update () {
 
 		//stop rotation
 		transform.rotation = Quaternion.identity;//so the obejct doesn't tilt
+
+
 		//level boundaries
-		if (transform.position.x > 20) {
-			Application.LoadLevel ("GameOver");
-			Application.Quit();
+		if (transform.position.x > 38.3f) {
+			SceneManager.LoadScene ("GameOver");
+			//Application.Quit();
 		}
-		if (transform.position.y < -20f) {
-			Application.LoadLevel ("GameOver");
-			Application.Quit ();
+		if (transform.position.y < -15f) {
+			SceneManager.LoadScene("GameOver");
+			//Application.Quit ();
 		}
 
 		if (Input.GetKeyDown (jumpButton)) 
@@ -148,8 +159,8 @@ public class squareMovement : MonoBehaviour {
 
 		//touchdie
 		if (c.gameObject.tag == "enemy") {
-			Application.LoadLevel ("GameOver");
-			Application.Quit ();
+			SceneManager.LoadScene("GameOver");
+			//Application.Quit ();
 		}
 
 	}
@@ -169,6 +180,14 @@ public class squareMovement : MonoBehaviour {
 //		}
 //	
 
+	}
+
+
+	//sound
+	public void PlayHitSound()
+	{
+		Sound.me.PlaySound (hitSnds, 1f);
+		//audioSource.Play();
 	}
 
 }
