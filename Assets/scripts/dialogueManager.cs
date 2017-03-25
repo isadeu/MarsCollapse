@@ -20,22 +20,21 @@ public class dialogueManager : MonoBehaviour {
 		
 		// Update is called once per frame
 		void Update () {
-				if (dialogueActive && Input.GetKeyDown(KeyCode.A)){
+		if (dialogueActive && Input.GetKeyDown (KeyCode.A)) {
 			Debug.Log ("manager A");
-						curLine++;
-					}
+			curLine++;
+		}
 
-				if (curLine >= dialogueLines.Length) {
-						dBox.SetActive (false);
-						dialogueActive = false;
-						
-
-						//curLine = 0;
-					}
+		if (curLine >= dialogueLines.Length) {
+			dBox.SetActive (false);
+			dialogueActive = false;  //truetext turns on no multiple ppl, true yes ppl but w loop
+			curLine = 0;
+			} else {
 
 				dText.text = dialogueLines [curLine];
-				
 			}
+				
+	}
 
 		public void ShowBox (string dialogue){
 		
