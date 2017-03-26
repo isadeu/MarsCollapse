@@ -58,6 +58,8 @@ public class BabysHeadset : MonoBehaviour {
 		if (c.gameObject.name == "colliderground"){
 			Debug.Log ("music collider");
 			source.PlayOneShot (headsetSnd, 1f);
+			Destroy (c.gameObject);
 	}
 	}
 }
+	
