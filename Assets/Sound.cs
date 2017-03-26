@@ -16,7 +16,7 @@ public class Sound : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		audSources = new AudioSource[32];
+		audSources = new AudioSource[12];
 		for (int i = 0; i < audSources.Length; i++) {
 			audSources[i] = (Instantiate(audSource, Vector3.zero, Quaternion.identity) as GameObject).GetComponent <AudioSource>();
 		}

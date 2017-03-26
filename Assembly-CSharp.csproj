@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\G.Oscene\GameOverCam.cs" />
+     <Compile Include="Assets\Music\BabysHeadset.cs" />
      <Compile Include="Assets\Singleton.cs" />
      <Compile Include="Assets\SingletonHelper.cs" />
      <Compile Include="Assets\Sound.cs" />
+     <Compile Include="Assets\WalkConnect.cs" />
      <Compile Include="Assets\opening Scene\openingScene.cs" />
      <Compile Include="Assets\scripts\deathCount.cs" />
      <Compile Include="Assets\scripts\dialogueHolder.cs" />
@@ -66,9 +68,6 @@
      <Compile Include="Assets\scripts\thingsMovement.cs" />
      <Compile Include="Assets\scripts\timer.cs" />
      <Compile Include="Assets\scripts\touchDie.cs" />
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -80,9 +79,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>

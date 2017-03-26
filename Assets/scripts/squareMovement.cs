@@ -33,7 +33,7 @@ public class squareMovement : MonoBehaviour {
 	public GameObject platform;
 
 	//sound
-	public AudioClip hitSnds;
+	//public AudioClip bkgSnds;
 	// text
 //	string[] dialogueLine = new string[3];
 //	public Text dText;
@@ -184,11 +184,11 @@ public class squareMovement : MonoBehaviour {
 
 
 	//sound
-	public void PlayHitSound()
-	{
-		Sound.me.PlaySound (hitSnds, 1f);
-		//audioSource.Play();
-	}
+//	public void PlaySound()
+//	{
+//		Sound.me.PlaySound (bkgSnds, 1f);
+//		//audioSource.Play();
+//	}
 
 }
 
