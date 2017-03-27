@@ -36,6 +36,7 @@ public class squareMovement : MonoBehaviour {
 	public AudioClip bbscream;
 	public AudioSource source;
 	public AudioClip crumble;
+	public AudioClip jumpLand;
 
 
 	public List<Vector2> pointList;
@@ -112,11 +113,13 @@ public class squareMovement : MonoBehaviour {
 	{
 		if (jumpFlag && onFloor) {
 			rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);	
+			source.PlayOneShot (jumpLand, .1f);
 		}
 
 		if (!Input.GetKey (jumpButton) && rb.velocity.y >= 0) {// ! = not
 			rb.velocity = new Vector2 (rb.velocity.x, Mathf.Lerp (rb.velocity.y, 0, .25f));
 			// linear: rb.velocity = new Vector2 (rb.velocity.x, Mathf.Max(rb.velocity.y - jumpAggro, 0);
+		
 		}
 
 		float goDir = 0;
