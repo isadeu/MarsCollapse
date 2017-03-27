@@ -38,7 +38,6 @@ public class squareMovement : MonoBehaviour {
 	public AudioClip crumble;
 	public AudioClip jumpLand;
 
-
 	public List<Vector2> pointList;
 	//public AudioClip bkgSnds;
 	// text
@@ -182,7 +181,7 @@ public class squareMovement : MonoBehaviour {
 		//crumble
 		if (c.gameObject.tag == "platform") {
 			Debug.Log ("noticed crubmling");
-			source.PlayOneShot (crumble, 1f);
+			source.PlayOneShot (crumble, .1f);
 		}
 
 	}
