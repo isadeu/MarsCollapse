@@ -177,12 +177,7 @@ public class squareMovement : MonoBehaviour {
 			SceneManager.LoadScene("GameOver");
 			//Application.Quit ();
 		}
-
-		//crumble
-		if (c.gameObject.tag == "platform") {
-			Debug.Log ("noticed crubmling");
-			source.PlayOneShot (crumble, .1f);
-		}
+			
 
 	}
 

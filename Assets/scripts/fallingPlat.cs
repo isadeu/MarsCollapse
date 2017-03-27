@@ -6,8 +6,9 @@ public class fallingPlat : MonoBehaviour {
 	Rigidbody2D rb;
 	public float fallDelay;
 	public float dissapearTime;
+	public GameObject PlatCollider;
 
-	public AudioClip rumble;
+	public AudioClip crumble;
 	public AudioSource source;
 	// Use this for initialization
 
@@ -38,6 +39,8 @@ public class fallingPlat : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (fallDelay);
 		rb.isKinematic = false;
+		Destroy (PlatCollider);
+		source.PlayOneShot (crumble, .2f);
 		yield return new WaitForSeconds(dissapearTime);
 		gameObject.active = false;
 		yield return 0;
