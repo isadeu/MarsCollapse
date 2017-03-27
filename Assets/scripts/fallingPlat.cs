@@ -6,7 +6,17 @@ public class fallingPlat : MonoBehaviour {
 	Rigidbody2D rb;
 	public float fallDelay;
 	public float dissapearTime;
+
+	public AudioClip rumble;
+	public AudioSource source;
 	// Use this for initialization
+
+
+	void Awake(){
+		source = GetComponent <AudioSource> ();
+	}
+
+
 	void Start () {
 		rb = GetComponent <Rigidbody2D> ();
 	}

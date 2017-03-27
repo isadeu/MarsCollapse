@@ -35,6 +35,7 @@ public class squareMovement : MonoBehaviour {
 	//sound
 	public AudioClip bbscream;
 	public AudioSource source;
+	public AudioClip crumble;
 
 
 	public List<Vector2> pointList;
@@ -173,6 +174,12 @@ public class squareMovement : MonoBehaviour {
 		if (c.gameObject.tag == "enemy") {
 			SceneManager.LoadScene("GameOver");
 			//Application.Quit ();
+		}
+
+		//crumble
+		if (c.gameObject.tag == "platform") {
+			Debug.Log ("noticed crubmling");
+			source.PlayOneShot (crumble, 1f);
 		}
 
 	}
