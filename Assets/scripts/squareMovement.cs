@@ -37,6 +37,7 @@ public class squareMovement : MonoBehaviour {
 	public AudioSource source;
 	public AudioClip crumble;
 	public AudioClip jumpLand;
+	public AudioClip shimmer;
 
 	public List<Vector2> pointList;
 	//public AudioClip bkgSnds;
@@ -112,7 +113,7 @@ public class squareMovement : MonoBehaviour {
 	{
 		if (jumpFlag && onFloor) {
 			rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);	
-			source.PlayOneShot (jumpLand, .1f);
+			source.PlayOneShot (jumpLand, .3f);
 		}
 
 		if (!Input.GetKey (jumpButton) && rb.velocity.y >= 0) {// ! = not
@@ -177,8 +178,11 @@ public class squareMovement : MonoBehaviour {
 			SceneManager.LoadScene("GameOver");
 			//Application.Quit ();
 		}
-			
 
+		if (c.gameObject.tag == "exit") {
+			source.PlayOneShot (shimmer, .9f);
+			//HeadsetSound.volume = Mathf.Lerp (6f, 0f, 2f);
+		}
 	}
 
 

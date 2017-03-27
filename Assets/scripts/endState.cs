@@ -7,6 +7,8 @@ public class endState : MonoBehaviour {
 	bool endScreen;
 	public SpriteRenderer savedScreen;
 
+	public GameObject headsetBab;
+
 	// Use this for initialization
 	void Start () {
 
@@ -19,7 +21,7 @@ public class endState : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D (Collider2D c){
-		if (c.gameObject.name == "colliderobjects") {
+		if (headsetBab) {
 			Debug.Log ("player recieed");
 			//endScreen = true;
 			//if (endScreen == true) {
