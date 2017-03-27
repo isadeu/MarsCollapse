@@ -33,6 +33,11 @@ public class squareMovement : MonoBehaviour {
 	public GameObject platform;
 
 	//sound
+	public AudioClip bbscream;
+	public AudioSource source;
+
+
+	public List<Vector2> pointList;
 	//public AudioClip bkgSnds;
 	// text
 //	string[] dialogueLine = new string[3];
@@ -42,12 +47,17 @@ public class squareMovement : MonoBehaviour {
 
 
 	//public float jumoAggro;
+
+	void Awake (){
+		source = GetComponent <AudioSource> ();
+	}
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		jumpButton = KeyCode.Space;
 		left = KeyCode.LeftArrow;
 		right = KeyCode.RightArrow;
+
 
 		//text
 //		for (int i = 0; i < 3; i++) {
@@ -134,6 +144,7 @@ public class squareMovement : MonoBehaviour {
 		
 			jumpFlag = false;
 		}
+			
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
@@ -155,6 +166,7 @@ public class squareMovement : MonoBehaviour {
 		Debug.Log ("noticed jumpback");
 		if (c.gameObject.name == "critterCollider") {
 			rb.AddForce (force, ForceMode2D.Impulse);
+			source.PlayOneShot (bbscream, .5f);
 		}
 
 		//touchdie
