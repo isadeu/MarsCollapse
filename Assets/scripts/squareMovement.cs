@@ -49,12 +49,18 @@ public class squareMovement : MonoBehaviour {
 
 
 	//public float jumoAggro;
+	//anim
+	Animator anim;
+	public bool moving = true;
 
 	void Awake (){
 		source = GetComponent <AudioSource> ();
 	}
 	// Use this for initialization
 	void Start () {
+
+		Animator force;
+
 		rb = GetComponent<Rigidbody2D> ();
 		jumpButton = KeyCode.Space;
 		left = KeyCode.LeftArrow;
@@ -124,11 +130,20 @@ public class squareMovement : MonoBehaviour {
 
 		float goDir = 0;
 		if (Input.GetKey (left)) {
+			anim.SetBool ("moving", true);
+			anim.SetBool ("moving right", false);
 			goDir--;
+		} else {
+			anim.SetBool ("moving", false);
 		}
 		if (Input.GetKey (right)) {
+			anim.SetBool ("moving right", false);
 			goDir++;
+		}else{
+			anim.SetBool ("moving", false);
 		}
+
+
 		if (onFloor) {
 			rb.AddForce (Vector2.right * floorForce * goDir);
 //			if (Mathf.Abs (rb.velocity.x) > 0) {//no
@@ -148,6 +163,7 @@ public class squareMovement : MonoBehaviour {
 		
 			jumpFlag = false;
 		}
+			
 			
 	}
 

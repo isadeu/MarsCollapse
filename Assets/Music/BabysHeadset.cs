@@ -18,19 +18,18 @@ public class BabysHeadset : MonoBehaviour {
 		
 
 	void Start(){
-		
-		//float startVol = source.volume;
 
 	}
 
 
 	void Update (){
-//
-//		if (Time.timeScale == 0f) {
-//			source.volume = .15f;
-//		} else {
-//			source.volume = .4f;
-//		}
+		
+		//pause volume
+		if (Time.timeScale == 0f) {
+			source.volume = .15f;
+		} else {
+			source.volume = .4f;
+		}
 			
 	}
 
@@ -50,12 +49,18 @@ public class BabysHeadset : MonoBehaviour {
 	}
 
 			IEnumerator AudioFadeOut (){
-				yield return new WaitForSeconds (0);
-				while (source.volume > 0) {
-			Debug.Log ("source vol is more than 0");
-					source.volume -= source.volume  * Time.deltaTime / fadeTime;
-				yield return 0;
+			source = GetComponent <AudioSource> ();
+
+			while (source.volume > 0.01f)
+			{
+				source.volume -= Time.deltaTime / 20f;
+				yield return null;
 			}
+//				while (source.volume > 0) {
+//			Debug.Log ("source vol is more than 0");
+//					source.volume -= source.volume  * Time.deltaTime / fadeTime;
+//				yield return 0;
+//			}
 
 //			IEnumerator fadeheadsetSnd = AudioFadeOut.FadeOut (headsetSnd, 0.5f);
 //			StartCoroutine (headsetSnd);

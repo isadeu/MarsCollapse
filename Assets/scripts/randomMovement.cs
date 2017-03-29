@@ -17,11 +17,16 @@ public class randomMovement : MonoBehaviour {
 	public float endLy = 0.16f;
 	Vector2 playerPosition;
 
+	//anim
+	Animator anim;
+
 
 	void Start (){
 		rb = GetComponent <Rigidbody2D> ();
-		SetVel ();
+		//SetVel ();
 		triggered = false;
+
+		anim = GetComponent<Animator> ();
 	}
 
 	void SetVel ()
@@ -30,8 +35,14 @@ public class randomMovement : MonoBehaviour {
 	{
 		if (Random.value > 0.5f || triggered == true) {
 			vel = Vector2.right * Random.Range(0, 1f); //2if random num is biger than .5 go right (speed determined by 1-5)
+			//anim
+			anim.SetBool("Left",false);
+			anim.SetBool ("Right", true);
 		} else {
 			vel = Vector2.left * Random.Range(0, 1f);//2if it is not go left and hwo far
+			//anim
+			anim.SetBool("Left",true);
+			anim.SetBool ("Right", false);
 		}
 	}
 	// Update is called once per frame
@@ -100,6 +111,7 @@ public class randomMovement : MonoBehaviour {
 //
 	void FixedUpdate (){
 		rb.velocity = vel;
+		//anim.SetFloat ("speed", vel);
 	}
 }
 	
