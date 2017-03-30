@@ -1,15 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/randomMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/squareMovement.cs">
     <Files>
-      <File FileName="Assets/scripts/pauseScreen.cs" Line="21" Column="14" />
+      <File FileName="Assets/scripts/squareMovement.cs" Line="168" Column="4" />
+      <File FileName="Assets/scripts/randomMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/pauseScreen.cs" Line="1" Column="1" />
       <File FileName="Assets/G.Oscene/GameOverCam.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/fallingPlat.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/followerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Music/BabysHeadset.cs" Line="27" Column="17" />
-      <File FileName="Assets/scripts/squareMovement.cs" Line="61" Column="30" />
-      <File FileName="Assets/scripts/randomMovement.cs" Line="26" Column="5" />
-      <File FileName="Assets/CritterAnim.cs" Line="11" Column="36" />
+      <File FileName="Assets/Music/BabysHeadset.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

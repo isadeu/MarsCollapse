@@ -51,7 +51,10 @@ public class squareMovement : MonoBehaviour {
 	//public float jumoAggro;
 	//anim
 	Animator anim;
-	public bool moving = true;
+	public bool movingRight;
+	public bool movingLeft;
+
+	public SpriteRenderer sprite;
 
 	void Awake (){
 		source = GetComponent <AudioSource> ();
@@ -59,7 +62,9 @@ public class squareMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		Animator force;
+
+		sprite = GetComponent<SpriteRenderer> ();
+		anim = GetComponent<Animator> ();
 
 		rb = GetComponent<Rigidbody2D> ();
 		jumpButton = KeyCode.Space;
@@ -92,7 +97,6 @@ public class squareMovement : MonoBehaviour {
 		}
 		if (transform.position.y < -15f) {
 			SceneManager.LoadScene("GameOver");
-			//Application.Quit ();
 		}
 
 		if (Input.GetKeyDown (jumpButton)) 
@@ -129,20 +133,44 @@ public class squareMovement : MonoBehaviour {
 		}
 
 		float goDir = 0;
-		if (Input.GetKey (left)) {
-			anim.SetBool ("moving", true);
-			anim.SetBool ("moving right", false);
+		if (Input.GetKey (left)) { 
 			goDir--;
-		} else {
-			anim.SetBool ("moving", false);
-		}
+			movingLeft = true;
+			movingRight = false;
+			Debug.Log ("movingLeft left bool is tuned on");
+		} //else {
+//			movingRight = false;
+//			movingLeft = false;
+		//}
+
+
 		if (Input.GetKey (right)) {
-			anim.SetBool ("moving right", false);
 			goDir++;
-		}else{
-			anim.SetBool ("moving", false);
+			movingRight = true;
+			movingLeft = false;
+		}// else {
+//			movingRight = false;
+//			movingLeft = false;
+//		}
+
+
+		//animations
+
+		if (movingLeft == true) {
+			Debug.Log ("animation left detect");
+			anim.SetBool ("moving Left", true);
+			anim.SetBool ("moving Right", false);
+			sprite.flipX = true;
+		}
+			
+		if (movingRight == true) {
+			Debug.Log ("dectefcts right for animation");
+			anim.SetBool ("moving Left", false);
+			anim.SetBool ("moving Right", true);
+			sprite.flipX = false;
 		}
 
+	
 
 		if (onFloor) {
 			rb.AddForce (Vector2.right * floorForce * goDir);
