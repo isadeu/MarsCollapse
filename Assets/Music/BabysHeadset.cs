@@ -28,7 +28,7 @@ public class BabysHeadset : MonoBehaviour {
 		if (Time.timeScale == 0f) {
 			source.volume = .15f;
 		} else {
-			source.volume = .4f;
+			source.volume = .2f;
 		}
 			
 	}
@@ -36,7 +36,7 @@ public class BabysHeadset : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "colliderground") {
 			Debug.Log ("music collider");
-			source.PlayOneShot (headsetSnd, .4f);
+			source.PlayOneShot (headsetSnd, .2f);
 			Destroy (c.gameObject);
 			Debug.Log ("destroyed");
 		}

@@ -53,6 +53,7 @@ public class squareMovement : MonoBehaviour {
 	Animator anim;
 	public bool movingRight;
 	public bool movingLeft;
+	public bool moving;
 
 	public SpriteRenderer sprite;
 
@@ -137,22 +138,30 @@ public class squareMovement : MonoBehaviour {
 			goDir--;
 			movingLeft = true;
 			movingRight = false;
+			anim.SetBool ("moving", true);
 			Debug.Log ("movingLeft left bool is tuned on");
-		} //else {
-//			movingRight = false;
-//			movingLeft = false;
-		//}
+		} else {
+			movingLeft = false;
+		}
 
 
 		if (Input.GetKey (right)) {
 			goDir++;
 			movingRight = true;
 			movingLeft = false;
-		}// else {
-//			movingRight = false;
-//			movingLeft = false;
-//		}
+			anim.SetBool ("moving", true);
+		} else {
+			movingRight = false;
+		}
 
+		if (! Input.GetKey (right) && !Input.GetKey (left)) {
+
+			anim.SetBool ("moving", false);
+			anim.SetBool ("moving Right", false);
+			anim.SetBool ("moving Left", false);
+			Debug.Log ("no input processed");
+		}
+			
 
 		//animations
 
