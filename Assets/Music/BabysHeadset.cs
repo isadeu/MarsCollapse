@@ -35,39 +35,29 @@ public class BabysHeadset : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "colliderground") {
-			Debug.Log ("music collider");
 			source.PlayOneShot (headsetSnd, .2f);
 			Destroy (c.gameObject);
-			Debug.Log ("destroyed");
+			 //Debug.Log ("destroyed");
 		}
-		if (c.gameObject.tag == "exit") {
-			Debug.Log ("it found my musical gal");
-			StartCoroutine ("AudioFadeOut");
-			//audioFadeOut 
-			//source.volume = Mathf.Lerp (.4f, 0, 1f);//Time.deltaTime);
-		}
-	}
 
-			IEnumerator AudioFadeOut (){
-			source = GetComponent <AudioSource> ();
-
-			while (source.volume > 0.01f)
-			{
-				source.volume -= Time.deltaTime / 20f;
-				yield return null;
-			}
-//				while (source.volume > 0) {
-//			Debug.Log ("source vol is more than 0");
-//					source.volume -= source.volume  * Time.deltaTime / fadeTime;
-//				yield return 0;
+//		if (c.gameObject.name  == "exitMusCollider") {
+//			Debug.Log ("it found my musical gal");
+//			StartCoroutine ("AudioFadeOut");
+//		}
+//	}
+//
+//			IEnumerator AudioFadeOut (){
+//			source = GetComponent <AudioSource> ();
+//
+//			// Check Music Volume and Fade Out
+//			while (source.volume > 0.01f)
+//			{
+//				source.volume -= Time.deltaTime / 20f;
+//				yield return null;
 //			}
-
-//			IEnumerator fadeheadsetSnd = AudioFadeOut.FadeOut (headsetSnd, 0.5f);
-//			StartCoroutine (headsetSnd);
-//			StopCoroutine (headsetSnd);
-
-				//StartCoroutine (AudioFadeOut.FadeOut (headsetSnd, 0.1f));
+//			source.volume = 0;
+//			source.Stop();
+//			yield return 0;
+//
 			}
 		}
-		//audio.volume = mathf.lerp(audio.volume, 0 , time.deltatime)	
-	

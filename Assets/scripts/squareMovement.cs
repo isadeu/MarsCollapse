@@ -159,21 +159,18 @@ public class squareMovement : MonoBehaviour {
 			anim.SetBool ("moving", false);
 			anim.SetBool ("moving Right", false);
 			anim.SetBool ("moving Left", false);
-			Debug.Log ("no input processed");
 		}
 			
 
 		//animations
 
 		if (movingLeft == true) {
-			Debug.Log ("animation left detect");
 			anim.SetBool ("moving Left", true);
 			anim.SetBool ("moving Right", false);
 			sprite.flipX = true;
 		}
 			
 		if (movingRight == true) {
-			Debug.Log ("dectefcts right for animation");
 			anim.SetBool ("moving Left", false);
 			anim.SetBool ("moving Right", true);
 			sprite.flipX = false;
