@@ -78,6 +78,7 @@ public class randomMovement : MonoBehaviour {
 
 	void OnTriggerEnter (){
 		triggered = true;
+
 	}
 
 	void OnTriggerExit (){
@@ -86,12 +87,21 @@ public class randomMovement : MonoBehaviour {
 
 
 	void OnTriggerEnter2D (Collider2D c){
+
 		
 		if (c.gameObject.name == "colliderobjects") {
+			anim.SetBool ("collide",true);
 //			Vector2 ah = new Vector2 (100f,-10);
 //			rb.AddForce (ah, ForceMode2D.Impulse);
 			source.PlayOneShot (miniscream, .3f);
 		
+		}//else {
+			//anim.SetBool ("collide", false);
+	}
+
+	void OnTriggerExit2D (Collider2D c){
+		if (c.gameObject.name == "colliderobjects") {
+			anim.SetBool ("collide", false);
 		}
 	}
 		//boundaries
