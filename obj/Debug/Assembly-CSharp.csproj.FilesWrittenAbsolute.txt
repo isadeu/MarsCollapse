@@ -40,3 +40,5 @@
 /Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/UnityEngine.Advertisements.dll

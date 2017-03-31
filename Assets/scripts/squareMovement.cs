@@ -55,7 +55,7 @@ public class squareMovement : MonoBehaviour {
 	public bool movingLeft;
 	public bool moving;
 
-	public SpriteRenderer sprite;
+	public SpriteRenderer sprite; //for the sprite flipX
 
 	void Awake (){
 		source = GetComponent <AudioSource> ();
@@ -139,7 +139,6 @@ public class squareMovement : MonoBehaviour {
 			movingLeft = true;
 			movingRight = false;
 			anim.SetBool ("moving", true);
-			Debug.Log ("movingLeft left bool is tuned on");
 		} else {
 			movingLeft = false;
 		}
@@ -217,7 +216,6 @@ public class squareMovement : MonoBehaviour {
 
 		//critter jump back reaction
 		Vector2 force = new Vector2 (10, 5);
-		Debug.Log ("noticed jumpback");
 		if (c.gameObject.name == "critterCollider") {
 			rb.AddForce (force, ForceMode2D.Impulse);
 			source.PlayOneShot (bbscream, .5f);

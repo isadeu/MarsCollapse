@@ -20,6 +20,14 @@ public class randomMovement : MonoBehaviour {
 	//anim
 	Animator anim;
 
+	public AudioClip miniscream;
+	public AudioSource source;
+
+
+	void Awake (){
+		source = GetComponent <AudioSource> ();
+	}
+
 
 	void Start (){
 		rb = GetComponent <Rigidbody2D> ();
@@ -64,15 +72,27 @@ public class randomMovement : MonoBehaviour {
 				curTime = 0;
 			}
 		}
+
 	}
 	 
+
 	void OnTriggerEnter (){
-		Debug.Log ("entered");
 		triggered = true;
 	}
 
 	void OnTriggerExit (){
 		triggered = false;
+	}
+
+
+	void OnTriggerEnter2D (Collider2D c){
+		
+		if (c.gameObject.name == "colliderobjects") {
+//			Vector2 ah = new Vector2 (100f,-10);
+//			rb.AddForce (ah, ForceMode2D.Impulse);
+			source.PlayOneShot (miniscream, .3f);
+		
+		}
 	}
 		//boundaries
 
@@ -111,7 +131,6 @@ public class randomMovement : MonoBehaviour {
 //
 	void FixedUpdate (){
 		rb.velocity = vel;
-		//anim.SetFloat ("speed", vel);
 	}
 }
 	

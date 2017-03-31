@@ -25,7 +25,6 @@ public class deathCount : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D c){
 		if (c.gameObject.tag == "NPCs") {
-			Debug.Log ("triggered");
 			peopleSaved += 1;
 			c.gameObject.SetActive (false);
 		}

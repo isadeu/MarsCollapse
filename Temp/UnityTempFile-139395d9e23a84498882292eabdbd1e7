@@ -86,6 +86,7 @@
 'Assets/SingletonHelper.cs'
 'Assets/Sound.cs'
 'Assets/WalkConnect.cs'
+'Assets/musicGalSit.cs'
 'Assets/opening Scene/openingScene.cs'
 'Assets/scripts/deathCount.cs'
 'Assets/scripts/dialogueHolder.cs'
