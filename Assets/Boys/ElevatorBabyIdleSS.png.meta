@@ -1,0 +1,652 @@
+fileFormatVersion: 2
+guid: 0bedea48758174cb7ad7603a4e17480b
+timeCreated: 1490995703
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ElevatorBabyIdleSS_0
+    21300002: ElevatorBabyIdleSS_1
+    21300004: ElevatorBabyIdleSS_2
+    21300006: ElevatorBabyIdleSS_3
+    21300008: ElevatorBabyIdleSS_4
+    21300010: ElevatorBabyIdleSS_5
+    21300012: ElevatorBabyIdleSS_6
+    21300014: ElevatorBabyIdleSS_7
+    21300016: ElevatorBabyIdleSS_8
+    21300018: ElevatorBabyIdleSS_9
+    21300020: ElevatorBabyIdleSS_10
+    21300022: ElevatorBabyIdleSS_11
+    21300024: ElevatorBabyIdleSS_12
+    21300026: ElevatorBabyIdleSS_13
+    21300028: ElevatorBabyIdleSS_14
+    21300030: ElevatorBabyIdleSS_15
+    21300032: ElevatorBabyIdleSS_16
+    21300034: ElevatorBabyIdleSS_17
+    21300036: ElevatorBabyIdleSS_18
+    21300038: ElevatorBabyIdleSS_19
+    21300040: ElevatorBabyIdleSS_20
+    21300042: ElevatorBabyIdleSS_21
+    21300044: ElevatorBabyIdleSS_22
+    21300046: ElevatorBabyIdleSS_23
+    21300048: ElevatorBabyIdleSS_24
+    21300050: ElevatorBabyIdleSS_25
+    21300052: ElevatorBabyIdleSS_26
+    21300054: ElevatorBabyIdleSS_27
+    21300056: ElevatorBabyIdleSS_28
+    21300058: ElevatorBabyIdleSS_29
+    21300060: ElevatorBabyIdleSS_30
+    21300062: ElevatorBabyIdleSS_31
+    21300064: ElevatorBabyIdleSS_32
+    21300066: ElevatorBabyIdleSS_33
+    21300068: ElevatorBabyIdleSS_34
+    21300070: ElevatorBabyIdleSS_35
+    21300072: ElevatorBabyIdleSS_36
+    21300074: ElevatorBabyIdleSS_37
+    21300076: ElevatorBabyIdleSS_38
+    21300078: ElevatorBabyIdleSS_39
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1648
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1648
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1648
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1648
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1648
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_6
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1648
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_7
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1648
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_9
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1248
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1248
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_11
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1248
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_12
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1248
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_13
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1248
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_14
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1248
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_15
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1248
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_17
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 848
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_18
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 848
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_19
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 848
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_20
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 848
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_21
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 848
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_22
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 848
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_23
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 848
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_25
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 448
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_26
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 448
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_27
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 448
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_28
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 448
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_29
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 448
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_30
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 448
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_31
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 448
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_33
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 48
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_34
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 48
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_35
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 48
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_36
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 48
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_37
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 48
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_38
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 48
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ElevatorBabyIdleSS_39
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 48
+        width: 250
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

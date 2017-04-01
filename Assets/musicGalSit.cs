@@ -47,9 +47,20 @@ public class musicGalSit : MonoBehaviour {
 
 		//amnimations
 
+	 		//sprite flipx
+		if (following == true && Input.GetKey (KeyCode.RightArrow)) {
+			sprite.flipX = false;
+		}
+
+		if (following == true && Input.GetKey (KeyCode.LeftArrow)) {
+			sprite.flipX = true;
+		}
+
+
+
 		float goDir = 0;
 		if (Input.GetKey(KeyCode.LeftArrow)) { 
-			goDir--;
+			//goDir--;
 			movingLeft = true;
 			anim.SetBool ("nothing", false);
 			//movingRight = false;
@@ -78,18 +89,16 @@ public class musicGalSit : MonoBehaviour {
 		}
 
 
-		//animations
 
 		if (movingLeft == true) {
 			//anim.SetBool ("moving Left", true);
 			anim.SetBool ("moving Right", false);
-			sprite.flipX = true;
+			//sprite.flipX = true;
 		}
 
 		if (movingRight == true) {
 			//anim.SetBool ("moving Left", false);
 			anim.SetBool ("moving Right", true);
-			sprite.flipX = false;
 		}
 
 

@@ -19,9 +19,18 @@ public class followerScript : MonoBehaviour {
 	//delay
 	bool delay;
 	public float WaitTime = .3f;
+	//anim
+	Animator anim;
+	public bool movingRight;
+	public bool movingLeft;
+	public SpriteRenderer sprite;
 
 	void Start () {
+
 		rb = GetComponent<Rigidbody2D> ();	
+		anim = GetComponent<Animator> ();
+		sprite = GetComponent<SpriteRenderer> ();
+
 	}
 
 
@@ -60,6 +69,64 @@ public class followerScript : MonoBehaviour {
 			StartCoroutine ("FollowerDelay");
 		
 		}
+
+
+		//amnimations
+
+		//sprite flipx
+		if (following == true && Input.GetKey (KeyCode.RightArrow)) {
+			sprite.flipX = false;
+		}
+
+		if (following == true && Input.GetKey (KeyCode.LeftArrow)) {
+			sprite.flipX = true;
+		}
+
+
+
+		float goDir = 0;
+		if (Input.GetKey(KeyCode.LeftArrow)) { 
+			//goDir--;
+			movingLeft = true;
+			anim.SetBool ("nothing", false);
+			//movingRight = false;
+			//anim.SetBool ("following", true);
+			Debug.Log ("movingLeft left bool is tuned on");
+		} else {
+			movingLeft = false;
+		}
+
+
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			goDir++;
+			movingRight = true;
+			anim.SetBool ("nothing", false);
+		} else {
+			movingRight = false;
+		}
+
+		if (!Input.GetKey (KeyCode.LeftArrow) && !Input.GetKey (KeyCode.RightArrow)) {
+
+			//anim.SetBool ("following", true);
+			anim.SetBool ("moving Right", false);
+			anim.SetBool ("nothing", true);
+		} else { 
+			anim.SetBool ("nothing", false);
+		}
+
+
+
+		if (movingLeft == true) {
+			//anim.SetBool ("moving Left", true);
+			anim.SetBool ("moving Right", false);
+			//sprite.flipX = true;
+		}
+
+		if (movingRight == true) {
+			//anim.SetBool ("moving Left", false);
+			anim.SetBool ("moving Right", true);
+		}
+
 	}
 
 	IEnumerator FollowerDelay (){
@@ -73,6 +140,7 @@ public class followerScript : MonoBehaviour {
 		if (c.gameObject.name == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
 			Debug.Log ("entered trigger god bless");
 			following = true;
+			anim.SetBool ("following", true);
 		}
 	}
 }
