@@ -39,8 +39,8 @@ public class fallingPlat : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (fallDelay);
 		rb.isKinematic = false;
-		Destroy (PlatCollider);
 		source.PlayOneShot (crumble, .2f);
+		Destroy(PlatCollider);
 		yield return new WaitForSeconds(dissapearTime);
 		gameObject.active = false;
 		yield return 0;
