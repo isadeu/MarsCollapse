@@ -9,6 +9,8 @@ public class BabysHeadset : MonoBehaviour {
 	public AudioClip headsetSnd;
 	public AudioSource source;
 
+	public GameObject endscreen;
+
 	//fade
 	public float fadeTime = 1f;
 
