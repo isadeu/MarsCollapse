@@ -17,7 +17,7 @@ public class thingsMovement: MonoBehaviour {
 	}
 	void Update() {
 
-		if (moving = true) {
+		if (moving == true) {
 			Vector2 fromM = new Vector2 (startLx, startLy); //starts here
 			Vector2 toM = new Vector2 (endLx, endLy); //goes to here and loops
 			transform.position = Vector2.Lerp (fromM, toM, Mathf.PingPong (Time.time * speed, 2));//mlem the two is how many numbers it will be looking for (xy)
