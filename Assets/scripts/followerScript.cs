@@ -91,7 +91,6 @@ public class followerScript : MonoBehaviour {
 			anim.SetBool ("nothing", false);
 			//movingRight = false;
 			//anim.SetBool ("following", true);
-			Debug.Log ("movingLeft left bool is tuned on");
 		} else {
 			movingLeft = false;
 		}
@@ -138,7 +137,6 @@ public class followerScript : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
-			Debug.Log ("entered trigger god bless");
 			following = true;
 			anim.SetBool ("following", true);
 		}

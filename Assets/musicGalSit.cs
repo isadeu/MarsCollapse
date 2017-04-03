@@ -19,6 +19,7 @@ public class musicGalSit : MonoBehaviour {
 	public bool movingRight;
 	public bool movingLeft;
 	public SpriteRenderer sprite;
+	public ParticleSystem particules;
 
 	// Use this for initialization
 	void Start () {
@@ -65,7 +66,6 @@ public class musicGalSit : MonoBehaviour {
 			anim.SetBool ("nothing", false);
 			//movingRight = false;
 			//anim.SetBool ("following", true);
-			Debug.Log ("movingLeft left bool is tuned on");
 		} else {
 			movingLeft = false;
 		}
@@ -115,6 +115,8 @@ public class musicGalSit : MonoBehaviour {
 		if (c.gameObject.name == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
 			following = true;
 			anim.SetBool ("following", true);
+			particules = GetComponent<ParticleSystem> ();
+			//particules.Play;
 		}
 	}
 }

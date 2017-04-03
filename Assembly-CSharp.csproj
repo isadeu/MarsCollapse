@@ -55,11 +55,13 @@
      <Compile Include="Assets\WalkConnect.cs" />
      <Compile Include="Assets\musicGalSit.cs" />
      <Compile Include="Assets\opening Scene\openingScene.cs" />
+     <Compile Include="Assets\outsideSounds.cs" />
      <Compile Include="Assets\scripts\deathCount.cs" />
      <Compile Include="Assets\scripts\dialogueHolder.cs" />
      <Compile Include="Assets\scripts\dialogueManager.cs" />
      <Compile Include="Assets\scripts\dialogueholder2.cs" />
      <Compile Include="Assets\scripts\endState.cs" />
+     <Compile Include="Assets\scripts\enterCave.cs" />
      <Compile Include="Assets\scripts\fallingPlat.cs" />
      <Compile Include="Assets\scripts\flys.cs" />
      <Compile Include="Assets\scripts\followerScript.cs" />
@@ -70,9 +72,6 @@
      <Compile Include="Assets\scripts\thingsMovement.cs" />
      <Compile Include="Assets\scripts\timer.cs" />
      <Compile Include="Assets\scripts\touchDie.cs" />
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -84,9 +83,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
