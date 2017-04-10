@@ -93,7 +93,7 @@ public class randomMovement : MonoBehaviour {
 			anim.SetBool ("collide",true);
 //			Vector2 ah = new Vector2 (100f,-10);
 //			rb.AddForce (ah, ForceMode2D.Impulse);
-			source.PlayOneShot (miniscream, .3f);
+			source.PlayOneShot (miniscream, .2f);
 		
 		}//else {
 			//anim.SetBool ("collide", false);

@@ -3,9 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using UnityStandardAssets.ImageEffects;
 public class squareMovement : MonoBehaviour {
 	//movement
+
+	/*//public dust systems[] 
+	//void oncollisionenter2d (collider2d call)
+	//for /int i = 0; i < dustsystems. length; i++){
+	//
+
+	// public height 
+	public transform sprite
+	public floats for basewidth and height ;
+	start 
+	basewidth = sprite.transfrom.localscale.x;
+	baseheight = sprite.transfrom.localscale.y;
+	update
+	
+	sprite.transform.localscale = new vector3 (basewidth + 1+ (1-height), y, 0);
+	*/
 	Rigidbody2D rb;
 	public float jumpForce;
 	public float floorDrag;
@@ -25,7 +41,6 @@ public class squareMovement : MonoBehaviour {
 	bool yesDrag = (true);
 
 	//npc text interactions
-	bool playerInTrigger = false;
 	//npcText currentNPC;
 
 	//falling platforms
@@ -47,7 +62,6 @@ public class squareMovement : MonoBehaviour {
 //	public GameObject dBox;
 //	public GameObject npcTalking;
 
-
 	//public float jumoAggro;
 	//anim
 	Animator anim;
@@ -55,13 +69,25 @@ public class squareMovement : MonoBehaviour {
 	public bool movingLeft;
 	public bool moving;
 
-	public SpriteRenderer sprite; //for the sprite flipX
+
+	/*public void Flahs (float Flashtime){
+		flashsprite.gameobject.setactive
+	*/
+
+	//public Bloom bloome;
+
+	public SpriteRenderer sprite; //for the sprite flipXç
+
+	//camera
+	cameraShake screenshakeScript;
 
 	void Awake (){
 		source = GetComponent <AudioSource> ();
 	}
 	// Use this for initialization
 	void Start () {
+		//bloome.bloomIntensity = 2.7f;
+		screenshakeScript = Camera.main.gameObject.GetComponent<cameraShake> ();
 
 
 		sprite = GetComponent<SpriteRenderer> ();
@@ -86,6 +112,14 @@ public class squareMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//wiggleSpd+= (if-height) *2.8f * Time.deltatime;
+		//wiggleSpd -= wigglespd *5.8f * Time.deltatime;
+		//fixedupdate
+
+		if (Input.GetKeyDown (KeyCode.S)) {
+			screenshakeScript.SetScreenshake (.3f, 1f, Vector3.right);
+		}
 
 		//stop rotation
 		transform.rotation = Quaternion.identity;//so the obejct doesn't tilt

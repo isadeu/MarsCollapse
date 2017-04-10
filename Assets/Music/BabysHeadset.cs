@@ -14,14 +14,18 @@ public class BabysHeadset : MonoBehaviour {
 	//fade
 	public float fadeTime = 1f;
 
+	//camera
+//	public screenShakeScript;
+
 	void Awake(){
 		source = GetComponent <AudioSource> ();
 	}
 		
 
 	void Start(){
-
+		//camera
 	}
+
 
 
 	void Update (){
@@ -30,14 +34,14 @@ public class BabysHeadset : MonoBehaviour {
 		if (Time.timeScale == 0f) {
 			source.volume = .15f;
 		} else {
-			source.volume = .2f;
+			source.volume = .3f;
 		}
 			
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "colliderground") {
-			source.PlayOneShot (headsetSnd, .2f);
+			source.PlayOneShot (headsetSnd, .3f);
 			Destroy (c.gameObject);
 			 //Debug.Log ("destroyed");
 		}
