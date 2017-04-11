@@ -55,7 +55,6 @@ public class squareMovement : MonoBehaviour {
 	public AudioClip shimmer;
 
 	public List<Vector2> pointList;
-	//public AudioClip bkgSnds;
 	// text
 //	string[] dialogueLine = new string[3];
 //	public Text dText;
@@ -68,6 +67,9 @@ public class squareMovement : MonoBehaviour {
 	public bool movingRight;
 	public bool movingLeft;
 	public bool moving;
+
+	public ParticleSystem poofsMRight;
+	public ParticleSystem poofsMLeft;
 
 
 	/*public void Flahs (float Flashtime){
@@ -86,8 +88,10 @@ public class squareMovement : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		//poofs = GetComponent <ParticleSystem> ();
 		//bloome.bloomIntensity = 2.7f;
-		screenshakeScript = Camera.main.gameObject.GetComponent<cameraShake> ();
+		//screenshakeScript = Camera.main.gameObject.GetComponent<cameraShake> ();
+
 
 
 		sprite = GetComponent<SpriteRenderer> ();
@@ -139,7 +143,23 @@ public class squareMovement : MonoBehaviour {
 			jumpFlag = true;
 		}
 			
-	
+
+		if (Input.GetKeyDown (left)) {
+			//particles
+			poofsMLeft.Play ();
+			poofsMRight.Stop ();
+		}if (Input.GetKeyUp (left)) {
+			poofsMLeft.Stop ();
+		}
+
+		if (Input.GetKeyDown (right)) {
+			//particles
+			poofsMRight.Play ();
+			Debug.Log ("do theys top tho");
+			poofsMLeft.Stop ();
+		}if (Input.GetKeyUp (right)) {
+			poofsMRight.Stop ();
+		}
 
 		//npc text interaction
 //		if (Input.GetKeyDown (KeyCode.A)) { //supposedly click A = npc text cancel
@@ -164,10 +184,13 @@ public class squareMovement : MonoBehaviour {
 		if (!Input.GetKey (jumpButton) && rb.velocity.y >= 0) {// ! = not
 			rb.velocity = new Vector2 (rb.velocity.x, Mathf.Lerp (rb.velocity.y, 0, .25f));
 			// linear: rb.velocity = new Vector2 (rb.velocity.x, Mathf.Max(rb.velocity.y - jumpAggro, 0);
+//			poofsMLeft.Pause(); 
+//			poofsMRight.Pause ();
 		
 		}
 
 		float goDir = 0;
+		//moving left
 		if (Input.GetKey (left)) { 
 			goDir--;
 			movingLeft = true;
@@ -175,9 +198,11 @@ public class squareMovement : MonoBehaviour {
 			anim.SetBool ("moving", true);
 		} else {
 			movingLeft = false;
+			//poofsMLeft.Stop ();
 		}
 
 
+		//moving right
 		if (Input.GetKey (right)) {
 			goDir++;
 			movingRight = true;
@@ -185,7 +210,10 @@ public class squareMovement : MonoBehaviour {
 			anim.SetBool ("moving", true);
 		} else {
 			movingRight = false;
+			//poofsMLeft.Stop ();
 		}
+	
+
 
 		if (! Input.GetKey (right) && !Input.GetKey (left)) {
 
@@ -235,6 +263,7 @@ public class squareMovement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
+
 		//still on movement
 		onFloor = true;
 		floorObjcts++;
@@ -261,10 +290,12 @@ public class squareMovement : MonoBehaviour {
 			//Application.Quit ();
 		}
 
+		//sfx
 		if (c.gameObject.tag == "exit") {
 			source.PlayOneShot (shimmer, .9f);
 			//HeadsetSound.volume = Mathf.Lerp (6f, 0f, 2f);
 		}
+			
 	}
 
 
