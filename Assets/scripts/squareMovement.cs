@@ -68,8 +68,10 @@ public class squareMovement : MonoBehaviour {
 	public bool movingLeft;
 	public bool moving;
 
+	//particles 
 	public ParticleSystem poofsMRight;
 	public ParticleSystem poofsMLeft;
+	public ParticleSystem poofsJump;
 
 
 	/*public void Flahs (float Flashtime){
@@ -141,10 +143,19 @@ public class squareMovement : MonoBehaviour {
 		if (Input.GetKeyDown (jumpButton)) 
 		{
 			jumpFlag = true;
+				//Debug.Log ("i see youre jumoing");
+			poofsJump.Play ();
+			poofsMLeft.Pause ();
+			poofsMLeft.Clear ();
+			poofsMRight.Pause ();
+			poofsMRight.Clear ();
+	
+
 		}
 			
 
-		if (Input.GetKeyDown (left)) {
+		if (Input.GetKeyDown (left)&& onFloor == true) {
+			Debug.Log ("on floor is true");
 			//particles
 			poofsMLeft.Play ();
 			poofsMRight.Stop ();
@@ -152,10 +163,10 @@ public class squareMovement : MonoBehaviour {
 			poofsMLeft.Stop ();
 		}
 
-		if (Input.GetKeyDown (right)) {
+		if (Input.GetKeyDown (right)&& onFloor == true) {
 			//particles
 			poofsMRight.Play ();
-			Debug.Log ("do theys top tho");
+			//Debug.Log ("do theys top tho");
 			poofsMLeft.Stop ();
 		}if (Input.GetKeyUp (right)) {
 			poofsMRight.Stop ();
@@ -184,8 +195,6 @@ public class squareMovement : MonoBehaviour {
 		if (!Input.GetKey (jumpButton) && rb.velocity.y >= 0) {// ! = not
 			rb.velocity = new Vector2 (rb.velocity.x, Mathf.Lerp (rb.velocity.y, 0, .25f));
 			// linear: rb.velocity = new Vector2 (rb.velocity.x, Mathf.Max(rb.velocity.y - jumpAggro, 0);
-//			poofsMLeft.Pause(); 
-//			poofsMRight.Pause ();
 		
 		}
 
