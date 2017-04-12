@@ -5,9 +5,15 @@ using UnityEngine;
 public class confetti : MonoBehaviour {
 
 
+
+	public AudioSource source;
+	//public AudioClip cheers;
 	public ParticleSystem confettii;
 	// Use this for initialization
 
+	void Awake () {
+		source = GetComponent <AudioSource> ();
+	}
 	void Start () {
 		
 	}

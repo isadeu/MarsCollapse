@@ -8,6 +8,7 @@ public class BabysHeadset : MonoBehaviour {
 
 	public AudioClip headsetSnd;
 	public AudioSource source;
+	public AudioClip cheers;
 
 	public GameObject endscreen;
 
@@ -41,6 +42,7 @@ public class BabysHeadset : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "colliderground") {
+			source.PlayOneShot (cheers, 1f);
 			source.PlayOneShot (headsetSnd, .3f);
 			Destroy (c.gameObject);
 			 //Debug.Log ("destroyed");
