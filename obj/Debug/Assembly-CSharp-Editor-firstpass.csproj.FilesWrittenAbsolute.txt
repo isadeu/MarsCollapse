@@ -41,3 +41,5 @@
 /Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
 /Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll
 /Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
+/Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/isadeu/Desktop/GD/Unity cs/Kraken/New Unity Project/MarsCollapse/Temp/bin/Debug/UnityEngine.Advertisements.dll

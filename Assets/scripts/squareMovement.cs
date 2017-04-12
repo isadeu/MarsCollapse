@@ -144,7 +144,7 @@ public class squareMovement : MonoBehaviour {
 		{
 			jumpFlag = true;
 				//Debug.Log ("i see youre jumoing");
-			poofsJump.Play ();
+			//poofsJump.Play ();
 			poofsMLeft.Pause ();
 			poofsMLeft.Clear ();
 			poofsMRight.Pause ();
@@ -152,15 +152,21 @@ public class squareMovement : MonoBehaviour {
 	
 
 		}
+
+		if (Input.GetKeyDown (jumpButton) && onFloor == true) {
+			poofsJump.Play ();
+		}
 			
 
 		if (Input.GetKeyDown (left)&& onFloor == true) {
-			Debug.Log ("on floor is true");
+			//Debug.Log ("listen left and floor buddy");
 			//particles
 			poofsMLeft.Play ();
 			poofsMRight.Stop ();
 		}if (Input.GetKeyUp (left)) {
 			poofsMLeft.Stop ();
+		//} if (!onFloor) {
+		//	poofsJump.Stop ();
 		}
 
 		if (Input.GetKeyDown (right)&& onFloor == true) {
@@ -275,6 +281,7 @@ public class squareMovement : MonoBehaviour {
 
 		//still on movement
 		onFloor = true;
+		Debug.Log ("on floor is true");
 		floorObjcts++;
 
 //		//npc text interaction
@@ -312,8 +319,9 @@ public class squareMovement : MonoBehaviour {
 		floorObjcts--;
 		if (floorObjcts <= 0) {
 			onFloor = false;
+			Debug.Log ("collision is false");
 		}
-
+			
 		//npc text interaction
 //		if (collisions.gameObject.tag == "NPCs") {
 //			playerInTrigger = false;
