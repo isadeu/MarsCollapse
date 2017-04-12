@@ -16,8 +16,8 @@ public class touchDie : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
-		if (c.gameObject.name == "Player")
-			{
+		if (c.gameObject.name == "colliderobjects"){
+			//Debug.Log ("it is in fact noticing you should die");
 			SceneManager.LoadScene ("GameOver");
 			//Application.Quit ();
 //			StartCoroutine ("Quit");
