@@ -42,7 +42,7 @@ public class BabysHeadset : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "colliderground") {
-			source.PlayOneShot (cheers, 1f);
+			source.PlayOneShot (cheers, .25f);
 			source.PlayOneShot (headsetSnd, .3f);
 			Destroy (c.gameObject);
 			 //Debug.Log ("destroyed");
