@@ -20,7 +20,6 @@ public class musicGalSit : MonoBehaviour {
 	public bool movingLeft;
 	public SpriteRenderer sprite;
 	public ParticleSystem particules;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -41,6 +40,7 @@ public class musicGalSit : MonoBehaviour {
 
 		//following
 		if (following == true){
+			//confettii.Emit (1);
 			gameObject.layer = LayerMask.NameToLayer("following");
 			pointList.Add (mainChara.transform.position);
 			StartCoroutine ("FollowerDelay");
@@ -117,6 +117,8 @@ public class musicGalSit : MonoBehaviour {
 			anim.SetBool ("following", true);
 			particules = GetComponent<ParticleSystem> ();
 			//particules.Play;
+
 		}
+
 	}
 }
