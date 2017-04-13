@@ -12,6 +12,8 @@ public class endState : MonoBehaviour {
 	public GameObject headsetBab;
 	public AudioSource headsetSource;
 
+	public ParticleSystem confettii;
+
 	// Use this for initialization
 	void Start () {
 		//savedScreen.color = new Color (savedScreen.color.r, savedScreen.color.g, savedScreen.color.b, 0f);
@@ -25,6 +27,8 @@ public class endState : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D c){
 		if (headsetBab) {
+			StartCoroutine ("PlaythatBoy");
+			//confettii.Play ();
 			Debug.Log ("player recieed");
 			endscreen.SetActive (true);
 			StartCoroutine ("Fadeout");
@@ -47,7 +51,12 @@ public class endState : MonoBehaviour {
 				yield return null;
 			}
 		}
+	}
+		IEnumerator PlaythatBoy (){
+			confettii.Play();
+			yield return null;
+		}
 	
 	}
 
-}
+

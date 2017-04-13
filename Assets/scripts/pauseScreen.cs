@@ -47,6 +47,7 @@ public class pauseScreen : MonoBehaviour {
 				gamePaused = false;
 				Time.timeScale = 1f;
 				Time.fixedDeltaTime = 0.01666667f;
+				//just hrd code button
 			}
 		}
 		

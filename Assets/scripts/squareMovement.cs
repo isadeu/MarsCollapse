@@ -19,9 +19,19 @@ public class squareMovement : MonoBehaviour {
 	basewidth = sprite.transfrom.localscale.x;
 	baseheight = sprite.transfrom.localscale.y;
 	update
-	
+
+
+/* ultimate movement base
+
+	vector2 moveVect = Vector2.0;
+	if(inputrbeifnegetkey)) { moveVect.x += 1;}
+	if fieifen right^leftv, then if up down
+	moveVect = moveVect.normalized;
+	transform.position += moveVect * (* time.deltaTime if u want )speed;
 	sprite.transform.localscale = new vector3 (basewidth + 1+ (1-height), y, 0);
 	*/
+
+	//Raycast (d, ((d-z).normalized)
 	Rigidbody2D rb;
 	public float jumpForce;
 	public float floorDrag;
@@ -103,7 +113,6 @@ public class squareMovement : MonoBehaviour {
 		jumpButton = KeyCode.Space;
 		left = KeyCode.LeftArrow;
 		right = KeyCode.RightArrow;
-
 
 		//text
 //		for (int i = 0; i < 3; i++) {

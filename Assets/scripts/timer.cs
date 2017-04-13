@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour {
 	Text timerText;
-	float timeLeft = 80.0f;
+	float timeLeft = 10000.0f;
 	// Use this for initialization
 	float speed = 2.0f;
 

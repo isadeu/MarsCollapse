@@ -8,6 +8,7 @@ public class newCamera : MonoBehaviour {
 	public float smoothTimeX;
 	public GameObject mainChara;
 
+
 	void Start () {
 		//mainChara = GameObject.FindGameObjectsWithTag ("Player");
 
