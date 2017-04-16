@@ -86,6 +86,7 @@
 'Assets/Singleton.cs'
 'Assets/SingletonHelper.cs'
 'Assets/Sound.cs'
+'Assets/bobbingscript.cs'
 'Assets/cameraShake.cs'
 'Assets/opening Scene/openingScene.cs'
 'Assets/redfog.cs'

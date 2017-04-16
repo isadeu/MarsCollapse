@@ -9,10 +9,19 @@ public class musicGalSit : MonoBehaviour {
 	public GameObject mainChara;
 	public List<Vector2> pointList;
 	//beforefollowing
-	bool following = false;
+	public bool following = false;
+	//public bool pausing = false;
 
 	bool delay;
 	public float WaitTime = .3f;
+	public GameObject buddy;
+	public float beginFollow = 1f;
+	public float dontTouchMe =.1f;
+	public Vector2 howFar;
+
+	public float Xdis;
+	public float Ydis;
+	//public float positionX;
 
 	//animations
 	Animator anim;
@@ -26,13 +35,22 @@ public class musicGalSit : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();	
 		anim = GetComponent<Animator> ();
 		sprite = GetComponent<SpriteRenderer> ();
-		
+
+		//positionX = mainChara.transform.position.x;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		transform.rotation = Quaternion.identity;
+
+
+
+//		if (pausing == true && Input.GetKeyDown (KeyCode.RightArrow)||Input.GetKeyDown (KeyCode.LeftArrow) ||Input.GetKeyDown (KeyCode.Space) ){
+//			pausing = false;
+//			following = true;
+			//			following = true;) {
+
 		
 	}
 
@@ -45,6 +63,35 @@ public class musicGalSit : MonoBehaviour {
 			pointList.Add (mainChara.transform.position);
 			StartCoroutine ("FollowerDelay");
 		}
+	
+
+		howFar = new Vector2 ((mainChara.transform.position.magnitude) - (buddy.transform.position.magnitude), 0);///((mainChara.transform.position.magnitude) - (buddy.transform.position.magnitude)));//if this works add y
+
+		Xdis = howFar.x;
+
+		if (Xdis >= 1f) {
+			following = true; 
+			//Debug.Log ("he is too far!");
+		}
+		if (Xdis < 1f) {
+			following = false;
+			//Debug.Log ("stop it");
+		}
+			
+
+//		if
+//			((buddy.transform.position.magnitude) - (mainChara.transform.position.magnitude) > beginFollow){
+//			following = true;
+//			Debug.Log ("he is too far!");
+//		} //else { 
+//		//following = false;
+//		//	}
+//		if ((buddy.transform.position.magnitude) - (mainChara.transform.position.magnitude) < dontTouchMe) {
+//			following = false;
+//			Debug.Log ("stop it");
+//		}
+
+
 
 		//amnimations
 
@@ -56,8 +103,7 @@ public class musicGalSit : MonoBehaviour {
 		if (following == true && Input.GetKey (KeyCode.LeftArrow)) {
 			sprite.flipX = true;
 		}
-
-
+			
 
 		float goDir = 0;
 		if (Input.GetKey(KeyCode.LeftArrow)) { 
@@ -115,10 +161,39 @@ public class musicGalSit : MonoBehaviour {
 		if (c.gameObject.name == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
 			following = true;
 			anim.SetBool ("following", true);
-			particules = GetComponent<ParticleSystem> ();
 			//particules.Play;
 
 		}
 
+//		if (c.gameObject.name == "dontTouchMe"){ //&& following == true) {
+//			Debug.Log ("noticed stop collider");
+//			//rb.position + Vector2.one;
+//		//}else{ rb.position = pointList [0];
+//			pausing = true;
+//			following = false;
+
+			//StartCoroutine ("LetaBoyBreathe");
+			//rb.transform.position = new Vector2 (Mathf.Clamp(transform.position.x, Mayydgasi,fbwefe), transform.position.y); 
+	
+		}
+	
+	//IEnumerator LetaBoyBreathe(){
+//		yield return new WaitForSeconds (.001f);
+//		//rb.position = new Vector2(1,1);// Vector2.zero;
+//		//rb.velocity = Vector2.zero; 
+//
+//		if (Input.GetKeyDown (KeyCode.RightArrow)||Input.GetKeyDown (KeyCode.LeftArrow) ||Input.GetKeyDown (KeyCode.Space) ){
+//			following = true;
+//			yield return 0;
+//		}
+
 	}
-}
+
+		//rigidbody.Addforce = Vector3 = zero
+
+		//yield return new WaitForSeconds (10f);
+		//if (Input.GetKeyDown (KeyCode.RightArrow)){
+		//	anim.SetBool ("nothing", true);
+			// || (KeyCode.LeftArrow) || (KeyCode.Space)) 
+
+

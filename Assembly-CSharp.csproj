@@ -52,6 +52,7 @@
      <Compile Include="Assets\Singleton.cs" />
      <Compile Include="Assets\SingletonHelper.cs" />
      <Compile Include="Assets\Sound.cs" />
+     <Compile Include="Assets\bobbingscript.cs" />
      <Compile Include="Assets\cameraShake.cs" />
      <Compile Include="Assets\opening Scene\openingScene.cs" />
      <Compile Include="Assets\redfog.cs" />

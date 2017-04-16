@@ -77,7 +77,6 @@ public class squareMovement : MonoBehaviour {
 	public bool movingRight;
 	public bool movingLeft;
 	public bool moving;
-
 	//particles 
 	public ParticleSystem poofsMRight;
 	public ParticleSystem poofsMLeft;
@@ -152,14 +151,13 @@ public class squareMovement : MonoBehaviour {
 		if (Input.GetKeyDown (jumpButton)) 
 		{
 			jumpFlag = true;
+			anim.SetBool ("jumping", true);
 				//Debug.Log ("i see youre jumoing");
 			//poofsJump.Play ();
 			poofsMLeft.Pause ();
 			poofsMLeft.Clear ();
 			poofsMRight.Pause ();
 			poofsMRight.Clear ();
-	
-
 		}
 
 		if (Input.GetKeyDown (jumpButton) && onFloor == true) {
@@ -290,7 +288,8 @@ public class squareMovement : MonoBehaviour {
 
 		//still on movement
 		onFloor = true;
-		Debug.Log ("on floor is true");
+		//anim.SetBool ("jumping", false);
+		//Debug.Log ("on floor is true");
 		floorObjcts++;
 
 //		//npc text interaction
