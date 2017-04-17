@@ -47,25 +47,6 @@ public class BabysHeadset : MonoBehaviour {
 			Destroy (c.gameObject);
 			 //Debug.Log ("destroyed");
 		}
-
-//		if (c.gameObject.name  == "exitMusCollider") {
-//			Debug.Log ("it found my musical gal");
-//			StartCoroutine ("AudioFadeOut");
-//		}
-//	}
-//
-//			IEnumerator AudioFadeOut (){
-//			source = GetComponent <AudioSource> ();
-//
-//			// Check Music Volume and Fade Out
-//			while (source.volume > 0.01f)
-//			{
-//				source.volume -= Time.deltaTime / 20f;
-//				yield return null;
-//			}
-//			source.volume = 0;
-//			source.Stop();
-//			yield return 0;
-//
+			
 			}
 		}

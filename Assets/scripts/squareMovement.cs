@@ -65,13 +65,7 @@ public class squareMovement : MonoBehaviour {
 	public AudioClip shimmer;
 
 	public List<Vector2> pointList;
-	// text
-//	string[] dialogueLine = new string[3];
-//	public Text dText;
-//	public GameObject dBox;
-//	public GameObject npcTalking;
 
-	//public float jumoAggro;
 	//anim
 	Animator anim;
 	public bool movingRight;
@@ -87,8 +81,6 @@ public class squareMovement : MonoBehaviour {
 		flashsprite.gameobject.setactive
 	*/
 
-	//public Bloom bloome;
-
 	public SpriteRenderer sprite; //for the sprite flipXç
 
 	//camera
@@ -99,11 +91,6 @@ public class squareMovement : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		//poofs = GetComponent <ParticleSystem> ();
-		//bloome.bloomIntensity = 2.7f;
-		//screenshakeScript = Camera.main.gameObject.GetComponent<cameraShake> ();
-
-
 
 		sprite = GetComponent<SpriteRenderer> ();
 		anim = GetComponent<Animator> ();
@@ -131,13 +118,14 @@ public class squareMovement : MonoBehaviour {
 		//wiggleSpd -= wigglespd *5.8f * Time.deltatime;
 		//fixedupdate
 
+
+
 		if (Input.GetKeyDown (KeyCode.S)) {
 			screenshakeScript.SetScreenshake (.3f, 1f, Vector3.right);
 		}
 
 		//stop rotation
 		transform.rotation = Quaternion.identity;//so the obejct doesn't tilt
-
 
 		//level boundaries
 		if (transform.position.x > 38.3f) {
@@ -148,12 +136,12 @@ public class squareMovement : MonoBehaviour {
 			SceneManager.LoadScene("GameOver");
 		}
 
+
+
 		if (Input.GetKeyDown (jumpButton)) 
 		{
 			jumpFlag = true;
 			anim.SetBool ("jumping", true);
-				//Debug.Log ("i see youre jumoing");
-			//poofsJump.Play ();
 			poofsMLeft.Pause ();
 			poofsMLeft.Clear ();
 			poofsMRight.Pause ();
@@ -185,16 +173,6 @@ public class squareMovement : MonoBehaviour {
 			poofsMRight.Stop ();
 		}
 
-		//npc text interaction
-//		if (Input.GetKeyDown (KeyCode.A)) { //supposedly click A = npc text cancel
-//
-//			if (playerInTrigger) { //if the player is within the npc trigger:
-//				if (Input.GetKeyDown (KeyCode.A)) {
-//					currentNPC.PlayerCancel ();
-//				}
-//			}
-//
-//		}
 
 	}		
 		
@@ -263,10 +241,7 @@ public class squareMovement : MonoBehaviour {
 
 		if (onFloor) {
 			rb.AddForce (Vector2.right * floorForce * goDir);
-//			if (Mathf.Abs (rb.velocity.x) > 0) {//no
 				rb.AddForce (Vector2.left * floorDrag * Mathf.Sign (rb.velocity.x) * Mathf.Pow (rb.velocity.x, 2));
-//			} else {//no
-//				rb.AddForce (Vector2.right * airFoce * goDir);//no
 
 				//drift prevention only after start 
 			if (yesDrag == true && goDir == 0 ) {
@@ -285,21 +260,15 @@ public class squareMovement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
-
+		if (c.gameObject.layer == LayerMask.NameToLayer("ground")){
+			Debug.Log ("only if the gorund buddy");
+	//	gameObject.layer = LayerMask.NameToLayer("following");
 		//still on movement
-		onFloor = true;
-		//anim.SetBool ("jumping", false);
-		//Debug.Log ("on floor is true");
-		floorObjcts++;
+			onFloor = true;
+			floorObjcts++;
+			Debug.Log ("on the floor");
+		}
 
-//		//npc text interaction
-//		if (c.gameObject.tag == "NPCs") {
-//			Debug.Log ("entered trigger");
-//			currentNPC = c.gameObject.GetComponent<npcText> ();
-//			c.gameObject.GetComponent<npcText> ().TalkToPlayer ();
-//
-//			playerInTrigger = true;
-//		}
 
 		//critter jump back reaction
 		Vector2 force = new Vector2 (10, 5);
@@ -317,36 +286,21 @@ public class squareMovement : MonoBehaviour {
 		//sfx
 		if (c.gameObject.tag == "exit") {
 			source.PlayOneShot (shimmer, .9f);
-			//HeadsetSound.volume = Mathf.Lerp (6f, 0f, 2f);
 		}
 			
 	}
 
 
 	void OnTriggerExit2D(Collider2D collisions){
-		floorObjcts--;
-		if (floorObjcts <= 0) {
-			onFloor = false;
-			Debug.Log ("collision is false");
+		if (collisions.gameObject.layer == LayerMask.NameToLayer ("ground")) {
+			floorObjcts--;
+			if (floorObjcts <= 0) {
+				onFloor = false;
+				Debug.Log ("collision is false");
+			}
 		}
-			
-		//npc text interaction
-//		if (collisions.gameObject.tag == "NPCs") {
-//			playerInTrigger = false;
-//
-//
-//		}
-//	
+
 
 	}
 
-
-	//sound
-//	public void PlaySound()
-//	{
-//		Sound.me.PlaySound (bkgSnds, 1f);
-//		//audioSource.Play();
-//	}
-
 }
-

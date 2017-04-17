@@ -42,7 +42,7 @@ public class fallingPlat : MonoBehaviour {
 		source.PlayOneShot (crumble, .2f);
 		Destroy(PlatCollider);
 		yield return new WaitForSeconds(dissapearTime);
-		gameObject.active = false;
+		gameObject.SetActive (false);		
 		yield return 0;
 
 
