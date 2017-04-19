@@ -16,6 +16,8 @@ public class textGl : MonoBehaviour {
 	public Sprite four;
 
 	void Start(){
+		goTexts = false;
+		counter = 0;
 		texts = new Sprite[4];
 		texts [0] = one;
 		texts [1] = two;
@@ -38,12 +40,25 @@ public class textGl : MonoBehaviour {
 		if (counter > texts.Length && goTexts == false) {
 			currentSprite.sprite = texts [counter % texts.Length];
 		}
+
+		if (counter > 6){//texts.Length) {
+			currentSprite.sprite = four;
+		}
+
+
+
+
 		//spriteRenderer.currentSprite = texts [counter % texts.Length];
 		//if (counter > 4 ){
-			Debug.Log ("turnign that shit off");
+			//Debug.Log ("turnign that shit off");
 			//goTexts = true;
 		//}
 	}
+
+//	void FixedUpdate (){
+//		if (counter >= 9) {
+//			goTexts = true;}
+//	}
 
 		//currentSprite = texts[counter];
 		//void OnGUI(){
