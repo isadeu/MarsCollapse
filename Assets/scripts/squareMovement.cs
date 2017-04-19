@@ -138,14 +138,15 @@ public class squareMovement : MonoBehaviour {
 
 
 
-		if (Input.GetKeyDown (jumpButton)) 
-		{
-			jumpFlag = true;
-			anim.SetBool ("jumping", true);
-			poofsMLeft.Pause ();
-			poofsMLeft.Clear ();
-			poofsMRight.Pause ();
-			poofsMRight.Clear ();
+		if (Input.GetKeyDown (jumpButton)) {
+			if (onFloor == true) {
+				jumpFlag = true;
+				anim.SetBool ("jumping", true);
+				poofsMLeft.Pause ();
+				poofsMLeft.Clear ();
+				poofsMRight.Pause ();
+				poofsMRight.Clear ();
+			}
 		}
 
 		if (Input.GetKeyDown (jumpButton) && onFloor == true) {
@@ -262,6 +263,7 @@ public class squareMovement : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.layer == LayerMask.NameToLayer("ground")){
 			Debug.Log ("only if the gorund buddy");
+			Debug.Log (c.name);
 	//	gameObject.layer = LayerMask.NameToLayer("following");
 		//still on movement
 			onFloor = true;
@@ -291,8 +293,8 @@ public class squareMovement : MonoBehaviour {
 	}
 
 
-	void OnTriggerExit2D(Collider2D collisions){
-		if (collisions.gameObject.layer == LayerMask.NameToLayer ("ground")) {
+	void OnTriggerExit2D(Collider2D c){
+		if (c.gameObject.layer == LayerMask.NameToLayer ("ground")) {
 			floorObjcts--;
 			if (floorObjcts <= 0) {
 				onFloor = false;

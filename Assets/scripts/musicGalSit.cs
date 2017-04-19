@@ -49,9 +49,9 @@ public class musicGalSit : MonoBehaviour {
 		//following
 		if (following == true){
 			//confettii.Emit (1);
-//			gameObject.layer = LayerMask.NameToLayer("following");
-//			pointList.Add (mainChara.transform.position);
-//			StartCoroutine ("FollowerDelay");
+			gameObject.layer = LayerMask.NameToLayer("following");
+			pointList.Add (mainChara.transform.position);
+			StartCoroutine ("FollowerDelay");
 		}
 	
 
@@ -147,13 +147,13 @@ public class musicGalSit : MonoBehaviour {
 		rb.isKinematic = true;
 	}
 
-//	void OnTriggerEnter2D (Collider2D c){
-//		if (c.gameObject.name == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
-//			following = true;
-//			anim.SetBool ("following", true);
-//			//particules.Play;
-//
-//		}
+	void OnTriggerEnter2D (Collider2D c){
+		if (c.gameObject.name == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
+			following = true;
+			anim.SetBool ("following", true);
+			//particules.Play;
+
+		}
 
 //		if (c.gameObject.name == "dontTouchMe"){ //&& following == true) {
 //			Debug.Log ("noticed stop collider");
@@ -177,4 +177,4 @@ public class musicGalSit : MonoBehaviour {
 //			yield return 0;
 //		}
 
-//	}
+	}
