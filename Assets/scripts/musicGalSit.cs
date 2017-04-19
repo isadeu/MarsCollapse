@@ -28,7 +28,6 @@ public class musicGalSit : MonoBehaviour {
 	public bool movingRight;
 	public bool movingLeft;
 	public SpriteRenderer sprite;
-	public ParticleSystem particules;
 	// Use this for initialization
 	void Start () {
 		
@@ -100,8 +99,6 @@ public class musicGalSit : MonoBehaviour {
 			//goDir--;
 			movingLeft = true;
 			anim.SetBool ("nothing", false);
-			//movingRight = false;
-			//anim.SetBool ("following", true);
 		} else {
 			movingLeft = false;
 		}
@@ -116,8 +113,6 @@ public class musicGalSit : MonoBehaviour {
 		}
 
 		if (!Input.GetKey (KeyCode.LeftArrow) && !Input.GetKey (KeyCode.RightArrow)) {
-
-			//anim.SetBool ("following", true);
 			anim.SetBool ("moving Right", false);
 			anim.SetBool ("nothing", true);
 		} else { 
@@ -127,13 +122,10 @@ public class musicGalSit : MonoBehaviour {
 
 
 		if (movingLeft == true) {
-			//anim.SetBool ("moving Left", true);
 			anim.SetBool ("moving Right", false);
-			//sprite.flipX = true;
 		}
 
 		if (movingRight == true) {
-			//anim.SetBool ("moving Left", false);
 			anim.SetBool ("moving Right", true);
 		}
 
@@ -151,7 +143,6 @@ public class musicGalSit : MonoBehaviour {
 		if (c.gameObject.name == "colliderobjects") {//if it triggers contact with player, player will become the parent of this object
 			following = true;
 			anim.SetBool ("following", true);
-			//particules.Play;
 
 		}
 

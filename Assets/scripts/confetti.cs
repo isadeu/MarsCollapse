@@ -24,10 +24,10 @@ public class confetti : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
-		if (c.gameObject.name == "colliderobjects") {
-			//Debug.Log ("confetti trigger");
-			//confettii.Play ();
-			//gameObject.SetActive (false);
+		if (c.gameObject.name == "colliderground") {
+			Debug.Log ("confetti trigger");
+			confettii.Play ();
+			gameObject.SetActive (false);
 		}
 	}
 }
