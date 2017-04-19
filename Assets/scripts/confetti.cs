@@ -6,13 +6,13 @@ public class confetti : MonoBehaviour {
 
 
 
-	public AudioSource source;
+	//public AudioSource source;
 	//public AudioClip cheers;
 	public ParticleSystem confettii;
 	// Use this for initialization
 
 	void Awake () {
-		source = GetComponent <AudioSource> ();
+		//source = GetComponent <AudioSource> ();
 	}
 	void Start () {
 		
@@ -27,7 +27,7 @@ public class confetti : MonoBehaviour {
 		if (c.gameObject.name == "colliderground") {
 			Debug.Log ("confetti trigger");
 			confettii.Play ();
-			gameObject.SetActive (false);
+			//gameObject.SetActive (false);
 		}
 	}
 }

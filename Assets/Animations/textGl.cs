@@ -9,6 +9,8 @@ public class textGl : MonoBehaviour {
 	private SpriteRenderer currentSprite;
 	private int counter;
 	public bool goTexts;
+	public GameObject gal;
+	public bool onGal;
 
 	public Sprite one;
 	public Sprite two;
@@ -33,18 +35,26 @@ public class textGl : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.G)) {
+		if (Input.GetKeyDown (KeyCode.G) ){//&& onGal == true) {
 			counter++;
 		} 
 
-		if (counter > texts.Length && goTexts == false) {
+		if (counter > texts.Length) { //&& goTexts == false) {
 			currentSprite.sprite = texts [counter % texts.Length];
 		}
 
-		if (counter > 6){//texts.Length) {
+		if (counter > 6) {//texts.Length) {
 			currentSprite.sprite = four;
 		}
+	}
 
+
+	void OnTriggerEnter2D (Collider2D c){
+		if (c.gameObject.name == "girlCollider") {
+			Debug.Log ("gal");
+			onGal = true;
+		}
+			
 
 
 
