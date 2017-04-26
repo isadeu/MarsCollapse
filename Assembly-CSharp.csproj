@@ -60,7 +60,6 @@
      <Compile Include="Assets\scripts\deathCount.cs" />
      <Compile Include="Assets\scripts\dialogueHolder.cs" />
      <Compile Include="Assets\scripts\dialogueManager.cs" />
-     <Compile Include="Assets\scripts\dialogueholder2.cs" />
      <Compile Include="Assets\scripts\endState.cs" />
      <Compile Include="Assets\scripts\enterCave.cs" />
      <Compile Include="Assets\scripts\fallingPlat.cs" />

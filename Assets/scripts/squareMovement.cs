@@ -68,6 +68,7 @@ public class squareMovement : MonoBehaviour {
 
 	//anim
 	Animator anim;
+	Animator canim;
 	public bool movingRight;
 	public bool movingLeft;
 	public bool moving;
@@ -94,6 +95,7 @@ public class squareMovement : MonoBehaviour {
 
 		sprite = GetComponent<SpriteRenderer> ();
 		anim = GetComponent<Animator> ();
+		canim = GetComponentInChildren<Animator> ();
 
 		rb = GetComponent<Rigidbody2D> ();
 		jumpButton = KeyCode.Space;
@@ -149,12 +151,12 @@ public class squareMovement : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKeyDown (jumpButton) && onFloor == true) {
+		if (Input.GetKeyDown (jumpButton)){// && onFloor == true) {
 			poofsJump.Play ();
 		}
 			
 
-		if (Input.GetKeyDown (left)&& onFloor == true) {
+		if (Input.GetKeyDown (left)){//&& onFloor == true) {
 			//Debug.Log ("listen left and floor buddy");
 			//particles
 			poofsMLeft.Play ();
@@ -162,7 +164,7 @@ public class squareMovement : MonoBehaviour {
 		}if (Input.GetKeyUp (left)) {
 			poofsMLeft.Stop ();
 		//} if (!onFloor) {
-		//	poofsJump.Stop ();
+			//poofsJump.Stop ();
 		}
 
 		if (Input.GetKeyDown (right)&& onFloor == true) {
@@ -242,19 +244,25 @@ public class squareMovement : MonoBehaviour {
 
 		if (onFloor) {
 			rb.AddForce (Vector2.right * floorForce * goDir);
-				rb.AddForce (Vector2.left * floorDrag * Mathf.Sign (rb.velocity.x) * Mathf.Pow (rb.velocity.x, 2));
+			rb.AddForce (Vector2.left * floorDrag * Mathf.Sign (rb.velocity.x) * Mathf.Pow (rb.velocity.x, 2));
 
-				//drift prevention only after start 
-			if (yesDrag == true && goDir == 0 ) {
-					if (Mathf.Abs (rb.velocity.x) < moveDeadzone) {
-						rb.velocity = new Vector2 (0, rb.velocity.y);
-					} else {
-						rb.AddForce (Vector2.left * Mathf.Sign (rb.velocity.x) * stopForce);
-					}
-		
+			//drift prevention only after start 
+			if (yesDrag == true && goDir == 0) {
+				if (Mathf.Abs (rb.velocity.x) < moveDeadzone) {
+					rb.velocity = new Vector2 (0, rb.velocity.y);
+				} else {
+					rb.AddForce (Vector2.left * Mathf.Sign (rb.velocity.x) * stopForce);
 				}
 		
+			}
+		
 			jumpFlag = false;
+
+			if (Input.GetKeyDown (KeyCode.F)) {
+				Debug.Log ("Text collider");
+				canim.SetBool ("ples", true);
+				Debug.Log ("but did it set tho");
+			}
 		}
 			
 			
@@ -289,8 +297,14 @@ public class squareMovement : MonoBehaviour {
 		if (c.gameObject.tag == "exit") {
 			source.PlayOneShot (shimmer, .9f);
 		}
+
+		//text anims
+//		if (c.gameObject.name == "textCollider") {
+//			Debug.Log ("Text collider");
+//			anim.SetBool ("seeGirlA", true);
 			
 	}
+
 
 
 	void OnTriggerExit2D(Collider2D c){
