@@ -270,7 +270,7 @@ public class squareMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.layer == LayerMask.NameToLayer("ground")){
-			Debug.Log ("only if the gorund buddy");
+			//Debug.Log ("only if the gorund buddy");
 			Debug.Log (c.name);
 	//	gameObject.layer = LayerMask.NameToLayer("following");
 		//still on movement

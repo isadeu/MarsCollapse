@@ -45,7 +45,7 @@ public class BabysHeadset : MonoBehaviour {
 			source.PlayOneShot (cheers, .25f);
 			source.PlayOneShot (headsetSnd, .3f);
 			Destroy (c.gameObject);
-			 //Debug.Log ("destroyed");
+			Debug.Log ("destroyed");
 		}
 			
 			}
