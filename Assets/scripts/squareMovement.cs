@@ -271,7 +271,7 @@ public class squareMovement : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.layer == LayerMask.NameToLayer("ground")){
 			//Debug.Log ("only if the gorund buddy");
-			Debug.Log (c.name);
+			//Debug.Log (c.name);
 	//	gameObject.layer = LayerMask.NameToLayer("following");
 		//still on movement
 			onFloor = true;
@@ -312,7 +312,7 @@ public class squareMovement : MonoBehaviour {
 			floorObjcts--;
 			if (floorObjcts <= 0) {
 				onFloor = false;
-				Debug.Log ("collision is false");
+				Debug.Log ("knows off the floor");
 			}
 		}
 

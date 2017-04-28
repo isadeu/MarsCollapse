@@ -94,7 +94,6 @@
 'Assets/scripts/deathCount.cs'
 'Assets/scripts/dialogueHolder.cs'
 'Assets/scripts/dialogueManager.cs'
-'Assets/scripts/dialogueholder2.cs'
 'Assets/scripts/endState.cs'
 'Assets/scripts/enterCave.cs'
 'Assets/scripts/fallingPlat.cs'

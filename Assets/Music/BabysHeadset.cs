@@ -11,6 +11,7 @@ public class BabysHeadset : MonoBehaviour {
 	public AudioClip cheers;
 
 	public GameObject endscreen;
+	public BoxCollider2D colli;
 
 	//fade
 	public float fadeTime = 1f;
@@ -20,6 +21,8 @@ public class BabysHeadset : MonoBehaviour {
 
 	void Awake(){
 		source = GetComponent <AudioSource> ();
+		colli = GetComponent <BoxCollider2D> ();
+		Debug.Log ("got that collider");
 	}
 		
 
@@ -44,9 +47,24 @@ public class BabysHeadset : MonoBehaviour {
 		if (c.gameObject.name == "colliderground") {
 			source.PlayOneShot (cheers, .25f);
 			source.PlayOneShot (headsetSnd, .3f);
-			Destroy (c.gameObject);
-			Debug.Log ("destroyed");
+			Destroy (colli);
+
+			//StartCoroutine ("Sec");
+			//gameObject.SetActive (false);
+			//Destroy (gameObject);
+			//Destroy (c.gameObject);
+
 		}
 			
 			}
+//	IEnumerator Sec (){
+//		
+//		source.PlayOneShot (cheers, .25f);
+//		source.PlayOneShot (headsetSnd, .3f);
+//		yield return new WaitForSeconds (1);
+//		gameObject.SetActive (false);
+//		Debug.Log ("destroyed");
+//		//Destroy (gameObject);
+//		yield return 0;
+//	}
 		}

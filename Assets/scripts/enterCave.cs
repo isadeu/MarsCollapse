@@ -35,6 +35,7 @@ public class enterCave : MonoBehaviour {
 		if (c.gameObject.name == "colliderground") {
 			source.Pause ();
 			source.PlayOneShot (cavesounds, .2f);
+			c.isTrigger = true;
 			Destroy (c.gameObject);
 			//Debug.Log ("destroyed");
 		}

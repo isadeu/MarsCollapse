@@ -19,7 +19,6 @@ public class cheers : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D c){
-		return;
 		if (c.gameObject.name == "colliderground") {
 			source.PlayOneShot (yay, .25f);
 			Debug.Log ("it played");
