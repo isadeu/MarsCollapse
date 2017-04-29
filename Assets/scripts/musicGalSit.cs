@@ -14,13 +14,13 @@ public class musicGalSit : MonoBehaviour {
 
 	bool delay;
 	public float WaitTime = .3f;
-	public GameObject buddy;
-	public float beginFollow = 1f;
-	public float dontTouchMe =.1f;
-	public Vector2 howFar;
-
-	public float Xdis;
-	public float Ydis;
+//	public GameObject buddy;
+//	public float beginFollow = 1f;
+//	public float dontTouchMe =.1f;
+//	public Vector2 howFar;
+//
+//	public float Xdis;
+//	public float Ydis;
 	//public float positionX;
 
 	//animations
@@ -47,7 +47,6 @@ public class musicGalSit : MonoBehaviour {
 
 		//following
 		if (following == true){
-			//confettii.Emit (1);
 			gameObject.layer = LayerMask.NameToLayer("following");
 			pointList.Add (mainChara.transform.position);
 			StartCoroutine ("FollowerDelay");
@@ -146,8 +145,9 @@ public class musicGalSit : MonoBehaviour {
 
 		}
 
-//		if (c.gameObject.name == "dontTouchMe"){ //&& following == true) {
-//			Debug.Log ("noticed stop collider");
+		if (c.gameObject.tag == "player") { //&& following == true) {
+			Debug.Log ("noticed stop collider");
+		}
 //			//rb.position + Vector2.one;
 //		//}else{ rb.position = pointList [0];
 //			pausing = true;
