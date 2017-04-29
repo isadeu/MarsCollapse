@@ -18,13 +18,13 @@ public class textGl : MonoBehaviour {
 	public Sprite four;
 
 	void Start(){
-		goTexts = false;
+		//goTexts = false;
 		counter = 0;
 		texts = new Sprite[4];
 		texts [0] = one;
 		texts [1] = two;
 		texts [2] = three;
-		texts [3] = four;
+		texts [3] = four; //transparent
 
 	
 
@@ -35,16 +35,21 @@ public class textGl : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.G) ){//&& onGal == true) {
+		if (Input.GetKeyDown (KeyCode.G)){// && goTexts ==true){//&& onGal == true) {
 			counter++;
+			Debug.Log ("code G");
 		} 
 
-		if (counter > texts.Length) { //&& goTexts == false) {
+		if (counter < texts.Length) { //&& goTexts == false) {
 			currentSprite.sprite = texts [counter % texts.Length];
+			//goTexts = false;
 		}
 
 		if (counter > 6) {//texts.Length) {
 			currentSprite.sprite = four;
+			Debug.Log ("??");
+			counter = 0;
+			//goTexts = false;
 		}
 	}
 
@@ -53,6 +58,7 @@ public class textGl : MonoBehaviour {
 		if (c.gameObject.name == "girlCollider") {
 			Debug.Log ("gal");
 			onGal = true;
+			goTexts = true;
 		}
 			
 

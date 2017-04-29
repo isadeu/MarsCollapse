@@ -22,7 +22,6 @@ public class BabysHeadset : MonoBehaviour {
 	void Awake(){
 		source = GetComponent <AudioSource> ();
 		colli = GetComponent <BoxCollider2D> ();
-		Debug.Log ("got that collider");
 	}
 		
 
@@ -45,7 +44,7 @@ public class BabysHeadset : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "colliderground") {
-			source.PlayOneShot (cheers, .25f);
+			//source.PlayOneShot (cheers, .25f);
 			source.PlayOneShot (headsetSnd, .3f);
 			Destroy (colli);
 

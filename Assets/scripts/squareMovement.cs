@@ -260,7 +260,6 @@ public class squareMovement : MonoBehaviour {
 
 			if (Input.GetKeyDown (KeyCode.F)) {
 				Debug.Log ("Text collider");
-				canim.SetBool ("ples", true);
 				Debug.Log ("but did it set tho");
 			}
 		}
