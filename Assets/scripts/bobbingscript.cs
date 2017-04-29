@@ -9,7 +9,7 @@ public class bobbingscript : MonoBehaviour {
 	void Start () {
 
 		anim = GetComponent<Animator> ();
-		Debug.Log ("??????");
+	//	Debug.Log ("??????");
 		
 	}
 	

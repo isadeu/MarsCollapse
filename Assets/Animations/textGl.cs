@@ -35,7 +35,7 @@ public class textGl : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.G)){// && goTexts ==true){//&& onGal == true) {
+		if (Input.GetKeyDown (KeyCode.G)&& goTexts == true){//&& onGal == true) {
 			counter++;
 			Debug.Log ("code G");
 		} 
@@ -57,6 +57,7 @@ public class textGl : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D c){
 		if (c.gameObject.name == "girlCollider") {
 			Debug.Log ("gal");
+			Destroy (c.gameObject);
 			onGal = true;
 			goTexts = true;
 		}

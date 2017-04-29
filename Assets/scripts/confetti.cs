@@ -16,7 +16,7 @@ public class confetti : MonoBehaviour {
 	void Awake () {
 		source = GetComponent <AudioSource> ();
 		colli = GetComponent <BoxCollider2D> ();
-		Debug.Log ("got that colldier");
+		//Debug.Log ("got that colldier");
 	}
 	void Start () {
 		
