@@ -21,10 +21,10 @@ public class textGl : MonoBehaviour {
 		//goTexts = false;
 		counter = 0;
 		texts = new Sprite[4];
-		texts [0] = one;
+		texts [0] = one;//transparent
 		texts [1] = two;
 		texts [2] = three;
-		texts [3] = four; //transparent
+		texts [3] = four; 
 
 	
 
@@ -45,11 +45,11 @@ public class textGl : MonoBehaviour {
 			//goTexts = false;
 		}
 
-		if (counter > 6) {//texts.Length) {
-			currentSprite.sprite = four;
+		if (counter > 3) {//texts.Length) {
+			//currentSprite.sprite = four;
 			Debug.Log ("??");
 			counter = 0;
-			//goTexts = false;
+			goTexts = false;
 		}
 	}
 
